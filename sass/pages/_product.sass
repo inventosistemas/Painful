@@ -1,0 +1,451 @@
+/* ========================================
+ *
+ * Product page
+ *
+ * ======================================== */
+
+.content-product
+	width: 100%
+	margin: 0
+
+	/* ----------------------------------------
+	 Product left
+	 ---------------------------------------- */
+	.prod-lf
+		margin: 0
+		padding: 0
+
+		#large-img, .content-thumb
+			display: inline-block
+			vertical-align: top
+			margin: 0
+			padding: 0
+
+		//Large image
+		#large-img
+			float: none
+			position: relative
+			border: 1px solid #eee
+			overflow: hidden
+			@media screen and (min-width: 1024px)
+				width: 83.4%
+			.box-img
+				display: inline-block
+				vertical-align: top
+				position: relative
+				width: 100%
+				padding: 50% 0
+				> div
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+
+			.box-video
+				display: none
+				.video
+					position: absolute
+					width: 100%
+					height: 0
+					top: 50%
+					left: 0
+					transform: translateY(-50%)
+					padding: 25px 0 56.25%
+				iframe
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+
+		//Content thumb
+		.content-thumb
+			@media screen and (min-width: 1024px)
+				float: left
+				width: 16.6%
+				padding: 0 10px 0 0
+			@at-root #box-thumb
+				.slick-arrow
+					display: inline-block
+					position: absolute
+					margin: 0
+					padding: 0
+					text-align: center
+					text-indent: -15000px
+					border: none
+					background-color: transparent
+					outline: 0 !important
+					&:after
+						content: ''
+						display: inline-block
+						vertical-align: top
+						position: absolute
+						top: 0
+						border-style: solid
+						width: 15px
+						height: 15px
+						transform: rotate(45deg) translateY(-50%)
+						background-color: transparent
+						+transition(all 0.25s)
+					&.slick-disabled
+						opacity: 0.4
+					&.slick-prev
+						left: 0
+					&.slick-next
+						right: 0
+				@media screen and (min-width: 1024px)
+					.slick-arrow
+						width: 100%
+						height: 18px
+						transform: none
+						&:after
+							left: 50%
+							transform: translateX(-50%) rotate(45deg)
+						&.slick-prev
+							top: 0
+							&:after
+								top: 4px
+								border-width: 3px 0 0 3px
+								border-color: #999 transparent transparent #999
+						&.slick-next
+							top: auto
+							bottom: 0
+							&:after
+								top: auto
+								bottom: 4px
+								border-width: 0 3px 3px 0
+								border-color: transparent #999 #999 transparent
+				@media screen and (max-width: 1023px)
+					margin-top: 10px
+					.slick-arrow
+						width: 18px
+						height: 100%
+						top: 50%
+						transform: translateY(-50%)
+						&:after
+							top: 50%
+						&.slick-prev
+							&:after
+								left: 1px
+								right: auto
+								border-width: 0 0 3px 3px
+								border-color: transparent transparent #999 #999
+						&.slick-next
+							&:after
+								left: auto
+								right: 9px
+								border-width: 3px 3px 0 0
+								border-color: #999 #999 transparent transparent
+
+		//Slides
+		.slick-list
+			margin: -2px 0
+			@media screen and (max-width: 1023px)
+				margin: 0 -2px
+		.slick-prev
+			+ .slick-list
+				margin: 20px 0
+				@media screen and (max-width: 1023px)
+					margin: 0 20px
+		.slick-slide
+			display: inline-block
+			vertical-align: top
+			position: relative
+			width: 100%
+			margin: 2px 0
+			padding: 0
+			height: auto
+			border: 1px solid #eee
+			cursor: pointer
+			img
+				display: inline-block
+				vertical-align: top
+				width: 100%
+				max-width: 100%
+			@media screen and (min-width: 1024px)
+				padding-top: 100%
+				img
+					position: absolute
+					top: 0
+					left: 0
+					height: 100%
+			@media screen and (max-width: 1023px)
+				margin: 0 2px
+
+		//Box share
+		.box-share
+			display: inline-block
+			vertical-align: top
+			width: 100%
+			margin: 15px 0 0 0
+			padding: 0 0 0 16.6%
+			.title, a
+				display: inline-block
+				vertical-align: middle
+			.title
+				margin-right: 10px
+				font-size: 14px
+				font-weight: 400
+			a
+				margin: 0 10px 0 0
+				font-size: 30px
+				line-height: 1
+				color: $accent-color
+				&:last-child
+					margin-right: 0
+				.fa-twitter-square
+					color: #2AAAE0
+				.fa-facebook-square
+					color: #3B5998
+			@media screen and (max-width: 1023px)
+				padding-left: 0
+
+	/* ----------------------------------------
+	 Product right
+	 ---------------------------------------- */
+	.prod-rt
+		margin: 0
+		padding: 0 0 0 30px
+		@media screen and (max-width: 767px)
+			margin-top: 40px
+			padding-left: 0
+
+		//Title
+		.title
+			width: 100%
+			margin: 0
+			padding: 0
+			font-size: 24px
+			font-weight: 400
+
+		//Box wish
+		.box-wish
+			width: 100%
+			margin: 10px 0
+			a
+				font-size: 14px
+				color: $accent-color
+			.fa
+				color: $accent-color
+
+		//Brand / provider
+		.brand-p, .provider-p
+			width: 100%
+			margin: 3px 0 0 0
+			font-size: 14px
+
+		//Box price
+		.box-price
+			display: inline-block
+			vertical-align: top
+			width: 100%
+			margin: 20px 0 0 0
+			line-height: 1
+			padding: 20px 0
+			border-top: 1px solid #eee
+			border-bottom: 1px solid #eee
+			> div
+				float: none
+				display: inline-block
+				vertical-align: middle
+				margin: 0
+				padding: 0
+				&:last-child
+					text-align: right
+			span, s
+				display: block
+			.price-old
+				margin-bottom: 4px
+				font-size: 14px
+				color: $p-price-o-color
+			.price
+				font-size: 22px
+				font-weight: 600
+				color: $p-price-color
+
+		//Box quantity
+		.box-qtd
+			display: inline-block
+			vertical-align: top
+			margin: 0
+			label, .add-qtd
+				display: inline-block
+				vertical-align: middle
+			label
+				margin-right: 5px
+				font-size: 14px
+				font-weight: 600
+			.add-qtd
+				position: relative
+				padding: 0 20px 0 0
+				> div
+					position: absolute
+					right: 0
+					width: 20px
+					height: 20px
+					font-size: 12px
+					line-height: 20px
+					text-align: center
+					background: #eeeeee
+					&.i-less
+						bottom: 0
+					&.i-plus
+						top: 0
+					input[type="button"]
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						margin: 0
+						padding: 0
+						opacity: 0
+						cursor: pointer
+			.qty
+				display: inline-block
+				vertical-align: top
+				width: 42px
+				height: 41px
+				padding: 0 5px
+				font-size: 14px
+				font-weight: 700
+				line-height: 41px
+				text-align: center
+				color: $dark-text
+				border-radius: 0
+				border: 1px solid #eeeeee
+				background-color: #fff
+
+		//Box type
+		.box-type
+			width: 100%
+			margin: 0
+			.type-p
+				float: left
+				width: 50%
+				margin: 15px 0 0 0
+				padding: 0 15px 0 0
+				&:nth-child(2n+2)
+					padding-right: 0
+				label
+					display: block
+					margin: 0 0 5px 0
+					font-size: 14px
+					font-weight: 700
+				.ui-selectmenu-button.ui-button
+					width: 100%
+				@media screen and (max-width: 991px)
+					width: 100%
+					padding-right: 0
+
+		//Stock
+		.stock
+			display: inline-block
+			vertical-align: top
+			width: 100%
+			margin: 25px 0 10px 0
+			font-size: 14px
+			font-weight: 600
+			color: $accent-color
+
+		//Result cart
+		#resultCart
+			width: 100%
+			margin: 0
+			font-size: 18px
+			font-weight: 700
+
+		//Box button
+		.box-btn
+			display: inline-block
+			vertical-align: top
+			width: 100%
+			margin: 10px 0 0 0
+			.btn-sold, .btn-buy
+				display: inline-block
+				vertical-align: top
+				width: 100%
+				margin: 0
+				padding: 15px 5px
+				font-size: 17px
+				line-height: 1
+				font-weight: 700
+				text-align: center
+				text-transform: uppercase
+				border: none
+				border-radius: 0
+			.btn-buy
+				color: $buy-color
+				background-color: $buy-bg
+				&:hover
+					color: $buy-color-hv
+					background-color: $buy-bg-hv
+			.btn-sold
+				color: $sold-color
+				background-color: $sold-bg
+				&:hover
+					color: $sold-color-hv
+					background-color: $sold-bg-hv
+
+		//Box installment
+		.box-installment
+			display: inline-block
+			vertical-align: top
+			width: 100%
+			margin: 20px 0 0 0
+			padding: 15px 0
+			background-color: #eee
+			.title
+				display: block
+				margin: 20px 0 10px 0
+				font-size: 16px
+				font-weight: 700
+				color: $accent-color
+			ul
+				margin: 0
+				padding: 0
+			li
+				display: inline-block
+				vertical-align: top
+				width: 100%
+				list-style: none
+				span
+					font-weight: 700
+
+		//Box attribute
+		.box-attr
+			display: inline-block
+			vertical-align: top
+			width: 100%
+			margin: 0
+			.title
+				display: block
+				margin: 20px 0 10px 0
+				font-size: 16px
+				font-weight: 700
+				border-bottom: 1px solid #eee
+			ul
+				margin: 0
+				padding: 0
+			li
+				padding: 1px 0
+				list-style: none
+				font-size: 13px
+				font-weight: 700
+				span
+					font-weight: 400
+
+/* ----------------------------------------
+ Content information
+ ---------------------------------------- */
+.content-info
+	width: 100%
+	margin: 0
+
+/* ----------------------------------------
+ Content related
+ ---------------------------------------- */
+.content-related
+	width: 100%
+	margin: 0

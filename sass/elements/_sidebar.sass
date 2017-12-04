@@ -1,0 +1,202 @@
+/* ========================================
+ *
+ * Sidebar
+ *
+ * ======================================== */
+
+.content-sidebar
+	float: left
+	display: inline-block
+	vertical-align: top
+	width: 220px
+	margin: 0
+	padding: 0 20px 0 0
+	@media screen and (max-width: 991px)
+		float: none
+		width: 100%
+		padding-right: 0
+
+	/* ----------------------------------------
+	 Title filter
+	 ---------------------------------------- */
+	.title-filter
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		margin: 0
+		padding: 15px 10px
+		text-align: center
+		background-color: #eee
+		h4, #countResult
+			display: inline-block
+			vertical-align: top
+			width: 100%
+			margin: 0
+		h4
+			font-size: 16px
+			font-weight: 600
+			text-transform: uppercase
+		#countResult
+			margin-top: 10px
+		.clear-filter
+			display: inline-block
+			vertical-align: top
+			margin: 5px 0 0 0
+			padding: 5px 8px
+			font-size: 12px
+			text-transform: uppercase
+			border: none
+			color: $button-color
+			background-color: $button-bg
+			&:hover
+				color: $button-color-hv
+				background-color: $button-bg-hv
+		@media screen and (max-width: 991px)
+			text-align: left
+			h4, #countResult
+				width: auto
+				vertical-align: middle
+			h4
+				margin-top: 3px
+				margin-right: 10px
+			#countResult
+				margin-top: 3px
+			.clear-filter
+				float: right
+				margin-top: 0
+
+/* ----------------------------------------
+ Sidebar toggle
+ ---------------------------------------- */
+.filter-toggle
+	display: none
+	vertical-align: top
+	width: 100%
+	padding: 5px 5px
+	font-size: 14px
+	line-height: 1
+	font-weight: 600
+	border-bottom: 1px solid #eee
+	cursor: pointer
+	span
+		display: inline-block
+		vertical-align: middle
+	.nav-plus
+		position: relative
+		margin-right: 5px
+	&.active
+		color: $accent-color
+		.nav-plus
+			&:after
+				opacity: 0
+	@media screen and (max-width: 991px)
+		display: inline-block
+
+/* ----------------------------------------
+ Sidebar filter
+ ---------------------------------------- */
+.side-filter
+	display: inline-block
+	vertical-align: top
+	width: 100%
+	margin: 0
+	padding: 0
+	@media screen and (max-width: 991px)
+		display: none
+		&.active
+			display: inline-block
+
+	#searchFilter
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		margin: 0
+		padding: 0
+
+	.panel
+		width: 100%
+		margin: 0
+		padding: 0
+		border: none
+		background: transparent
+		box-shadow: none
+		+ .panel
+			margin-top: 5px
+		.panel-heading, .panel-collapse
+			width: 100%
+			margin: 0
+			padding: 0
+			border: none
+		.panel-heading
+			border-bottom: 1px solid #eee
+			.panel-title
+				font-size: inherit
+				font-weight: inherit
+				color: inherit
+			a
+				display: inline-block
+				vertical-align: top
+				position: relative
+				width: 100%
+				margin: 0
+				padding: 10px 5px
+				font-size: 14px
+				font-weight: 600
+				color: $dark-text
+				text-decoration: none
+				&:hover
+					color: $accent-color
+				&:before
+					content: ''
+					display: inline-block
+					font-style: normal
+					position: absolute
+					top: 12px
+					right: 5px
+					width: 8px
+					height: 8px
+					margin: 0
+					border-left: 2px solid $accent-color
+					border-bottom: 2px solid $accent-color
+					transform: rotate(-45deg)
+				&[aria-expanded="true"]
+					&:before
+						top: 14px
+						border: none
+						border-top: 2px solid $accent-color
+						border-right: 2px solid $accent-color
+						opacity: 0.4
+
+		.panel-collapse
+			border-bottom: 1px solid #eee
+			.panel-body
+				margin: 0
+				padding: 15px 10px
+				border: none
+			label
+				display: inline-block
+				vertical-align: top
+				width: 100%
+				margin: 0 0 0 0
+				font-size: 14px
+				font-weight: 400
+				span, input[type="checkbox"]
+					display: inline-block
+					vertical-align: middle
+				input[type="checkbox"]
+					margin-right: 5px
+
+		.handles-wrap
+			.range-value
+				display: inline-block
+				vertical-align: top
+				width: 100%
+				margin: 10px 0 0 0
+				text-align: center
+				p
+					display: inline-block
+					vertical-align: top
+					margin: 0
+					font-size: 14px
+				.max-val, .min-val
+					font-weight: 600

@@ -1,0 +1,289 @@
+/* ========================================
+ *
+ * Footer
+ *
+ * ======================================== */
+
+#footer
+	display: inline-block
+	vertical-align: top
+	width: 100%
+	margin: 0
+	padding: 0
+
+/* ----------------------------------------
+ Footer
+ ---------------------------------------- */
+.footer
+	display: inline-block
+	vertical-align: top
+	width: 100%
+	margin: 22px 0 0 0
+	color: #828282
+	line-height: 1.2
+	border-top: 3px solid $accent-color
+	background-color: #000000
+	a
+		color: #828282
+		&:hover
+			color: $accent-color
+
+	.inner-ft
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		> div
+			&:nth-child(3), &:nth-child(4)
+				padding-right: 0
+			@media screen and (min-width: 992px)
+				&:first-child
+					width: 32%
+					padding-bottom: 20px
+				&:nth-child(2)
+					width: 31%
+					padding-bottom: 20px
+				&:nth-child(3)
+					width: 9.5%
+				&:nth-child(4)
+					width: 27.5%
+			@media screen and (max-width: 991px)
+				&:nth-child(3)
+					margin-top: 25px
+			@media screen and (max-width: 520px)
+				width: 100%
+
+	.ft-col
+		float: none
+		display: inline-block
+		vertical-align: top
+		padding: 0 15px 0 0
+		@media screen and (max-width: 520px)
+			padding-right: 0
+
+	//Title
+	h2
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		margin: 24px 0 10px 0
+		padding: 0
+		font-size: 18px
+		font-weight: 700
+		color: #fff
+		text-transform: uppercase
+
+	//Nav
+	nav
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		margin: 0
+
+	//Logo footer
+	.logo-ft
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		max-width: 240px
+		margin: 23px 0 0 0
+		img
+			max-height: 26px
+		p
+			width: 100%
+			margin: 12px 0 0 0
+			font-size: 15px
+			line-height: 1.3
+			text-align: justify
+		@media screen and (max-width: 520px)
+			max-width: inherit
+
+	//Customer footer
+	.customer-ft
+		margin: 0
+		h2
+			padding-left: 25px
+	.info-ft
+		.box-icon
+			display: inline-block
+			vertical-align: top
+			position: relative
+			width: 100%
+			margin: 0 0 19px 0
+			padding: 0 0 0 25px
+			&:last-child
+				margin-bottom: 0
+			.icon
+				position: absolute
+				top: 0
+				left: 0
+			&.phone
+				line-height: 1.7
+			&.mail, &.address
+				font-size: 12px
+
+	//Midias footer
+	.midias-ft
+		padding: 20px 0 0 0
+		min-height: 300px
+		text-align: center
+		background: rgba(55,55,55,1)
+		background: -moz-linear-gradient(-45deg, rgba(55,55,55,1) 0%, rgba(29,29,29,1) 100%)
+		background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(55,55,55,1)), color-stop(100%, rgba(29,29,29,1)))
+		background: -webkit-linear-gradient(-45deg, rgba(55,55,55,1) 0%, rgba(29,29,29,1) 100%)
+		background: linear-gradient(135deg, rgba(55,55,55,1) 0%, rgba(29,29,29,1) 100%)
+		a
+			display: block
+			width: 25px
+			margin: 0 auto 19px
+			img
+				display: inline-block
+				vertical-align: top
+			&:last-child
+				margin-bottom: 0
+		@media screen and (max-width: 991px)
+			padding: 15px
+			min-height: 0
+			a
+				display: inline-block
+				vertical-align: middle
+				margin: 0 15px
+
+	//Box facebook
+	.box-facebook
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		margin: 0
+		text-align: center
+		overflow: hidden
+
+/* -----------------------------------------------------
+ Content instagram
+ ---------------------------------------------------- */
+.content-instagram
+	display: inline-block
+	vertical-align: top
+	width: 100%
+	margin: 20px 0 0 0
+	padding: 0
+	.title
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		margin: 0 0 15px 0
+		padding: 0
+		font-size: 20px
+		line-height: 1
+		font-weight: 300
+		color: $dark-text
+		text-align: center
+		img, span
+			display: inline-block
+			vertical-align: middle
+		img
+			margin-right: 6px
+
+	#instafeed
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		margin: 0
+		.slick-list
+			margin: 0
+		.slick-dots
+			display: none !important
+		.slick-arrow
+			position: absolute
+			width: 20px
+			height: 20px
+			bottom: 100%
+			margin: 0 0 16px 0
+			padding: 0
+			text-indent: -15000px
+			border: none
+			background-color: $accent-color
+			overflow: hidden
+			z-index: 1
+			&:after
+				content: ''
+				position: absolute
+				top: 50%
+				border-style: solid
+				width: 8px
+				height: 8px
+				transform: translateY(-50%) rotate(45deg)
+				background-color: transparent
+				+transition(all 0.25s)
+			&.slick-prev
+				right: 24px
+				&:after
+					left: 7px
+					border-width: 0 0 3px 3px
+					border-color: transparent transparent #ffffff #ffffff
+			&.slick-next
+				right: 0
+				&:after
+					right: 7px
+					border-width: 3px 3px 0 0
+					border-color: #ffffff #ffffff transparent transparent
+
+		.photo-i
+			display: inline-block
+			vertical-align: top
+			margin: 0
+			padding: 0 1px 0 0
+			.inner
+				display: inline-block
+				vertical-align: top
+				position: relative
+				width: 100%
+				padding: 50%
+				background-size: cover
+				background-position: center center
+				background-repeat: no-repeat
+				overflow: hidden
+				img
+					display: none
+			.box-like
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background-color: rgba(#000, 0.65)
+				opacity: 0
+				transition: all, 0.2s
+				.center
+					display: inline-block
+					vertical-align: top
+					position: relative
+					width: 100%
+					top: 50%
+					padding: 0
+					transform: translateY(-50%)
+					text-align: center
+				span
+					display: inline-block
+					vertical-align: middle
+					margin: 4px 10px
+					padding: 0
+					font-size: 1.2rem
+					font-weight: 300
+					line-height: 1
+					color: #fff
+					&:before
+						content: ''
+						display: inline-block
+						vertical-align: middle
+						margin: 0 9px 0 0
+				.likes
+					&:before
+						content: '\f004'
+						font: normal normal normal 14px/1 FontAwesome
+				.comments
+					&:before
+						content: '\f27a'
+						font: normal normal normal 14px/1 FontAwesome
+			&:hover
+				.box-like
+					opacity: 1

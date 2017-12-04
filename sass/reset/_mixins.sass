@@ -1,0 +1,26 @@
+// ========================================
+//
+// Transitions
+// 
+// ========================================
+
+=transition($var1)
+	-webkit-transition: $var1
+	-moz-transition: $var1
+	-o-transition: $var1
+	transition: $var1
+
+=placeholder($var1)
+	&.placeholder
+		color: $var1
+		opacity: 1
+	&:-moz-placeholder
+		color: $var1
+		opacity: 1
+	&::-moz-placeholder
+		color: $var1
+		opacity: 1
+	&::-webkit-input-placeholder
+		color: $var1
+		opacity: 1
+

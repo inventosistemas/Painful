@@ -1,0 +1,193 @@
+/* ========================================
+ *
+ * Fixed Header
+ *
+ * ======================================== */
+
+#fixed-header
+	position: fixed
+	top: 0
+	left: 0
+	transform: translateY(-100%)
+	width: 100%
+	margin: 0
+	background-color: #000
+	z-index: 1010
+	opacity: 0
+	+transition(all 0.25s)
+	&.active
+		opacity: 1
+		transform: translateY(0)
+	@media screen and (max-width: 767px)
+		display: none
+
+	/* ----------------------------------------
+	 Logo fixed
+	 ---------------------------------------- */
+	.logo-fx
+		display: inline-block
+		vertical-align: top
+		margin: 15px 0 0 0
+		img
+			width: 100%
+			max-width: 149px
+		@media screen and (max-width: 991px)
+			img
+				max-width: 120px
+
+	/* ----------------------------------------
+	 Customer
+	 ---------------------------------------- */
+	.customer-up
+		display: inline-block
+		vertical-align: top
+		margin: 16px 0 0 5.2%
+		.box-icon
+			margin: 0
+		@media screen and (max-width: 991px)
+			margin-left: 4%
+
+	/* ----------------------------------------
+	 Header right
+	 ---------------------------------------- */
+	.header-rt
+		float: right
+		position: relative
+		top: auto
+		right: auto
+		width: 40.8%
+		margin: 3px 0 5px 0
+		@media screen and (max-width: 991px)
+			width: 36%
+			margin-top: 4px
+	.box-search
+		margin-left: 0
+		.textbox
+			width: 100%
+			height: 47px
+			padding: 0 55px 0 15px
+			opacity: 1
+		.btn-search
+			width: 47px
+			height: 47px
+			background-position: center center
+		@media screen and (min-width: 992px)
+			margin-right: 76px
+		@media screen and (max-width: 991px)
+			.textbox
+				height: 40px
+				padding-right: 45px
+			.btn-search
+				width: 40px
+				height: 40px
+				background-size: auto 55%
+	.box-cart
+		margin-top: 3px
+		a
+			.cart-qtd
+				color: #fff
+		@media screen and (max-width: 991px)
+			margin-top: 0
+
+	/* ----------------------------------------
+	 Fixed nav
+	 ---------------------------------------- */
+	.fixed-nav
+		display: inline-block
+		vertical-align: top
+		position: relative
+		margin: 18px 0 0 8.2%
+		@media screen and (max-width: 1199px)
+			margin-left: 6%
+		@media screen and (max-width: 991px)
+			margin-left: 4%
+
+		.title-nav
+			display: inline-block
+			vertical-align: top
+			margin: 0
+			padding: 0
+			font-size: 14px
+			font-weight: 700
+			line-height: 1
+			color: #fff
+			text-align: center
+			text-transform: uppercase
+			cursor: pointer
+			.icon, .text
+				display: inline-block
+				vertical-align: middle
+				margin: 0
+			.icon
+				width: 20px
+				margin-right: 7px
+				.i-bar
+					display: block
+					width: 100%
+					height: 4px
+					margin: 0 auto 3px auto
+					border-radius: 2px
+					background-color: $accent-color
+					&:last-child
+						margin-bottom: 0
+
+		.box-nav
+			display: none
+			position: absolute
+			top: 100%
+			left: 0
+			width: 100%
+			min-width: 220px
+			margin: 0
+			padding: 17px 0 0 0
+			text-align: left
+			@media screen and (max-width: 1023px)
+				&.active
+					display: inline-block
+			@media screen and (max-width: 991px)
+				padding-top: 11px
+
+			ul, li, a
+				display: inline-block
+				vertical-align: top
+				width: 100%
+				margin: 0
+				padding: 0
+			li
+				position: relative
+				padding-left: 25px
+			a
+				padding: 3px 0
+				font-size: 14px
+				color: $text-color
+				&:hover
+					color: $accent-color
+			.menu-l1
+				max-height: 453px
+				padding: 7px 10px
+				border: 1px solid #e7e7e7
+				background: #fff
+				overflow: auto
+				> li
+					.nav-plus
+						display: block
+						top: 6px
+						overflow: hidden
+					ul
+						display: inline-block
+						vertical-align: top
+						width: 100%
+						margin: 0
+					.drop-content
+						display: none
+						&.active
+							display: inline-block
+					.menu-l3
+						li
+							padding-left: 15px
+		@media screen and (min-width: 1024px)
+			.box-nav
+				display: none !important
+			&:hover
+				.box-nav
+					display: inline-block !important

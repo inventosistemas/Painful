@@ -1,0 +1,342 @@
+/* ========================================
+ *
+ * Nav
+ *
+ * ======================================== */
+
+@media screen and (max-width: 1023px)
+	body
+		&.menu-open
+			position: fixed
+			width: 100%
+			height: 100%
+			overflow: hidden
+
+.main-navigation
+	display: inline-block
+	vertical-align: top
+	width: 77.8%
+	margin: 7px 0 0 0
+	padding: 0 150px 0 0
+	.ue-menu
+		display: inline-block
+		vertical-align: top
+		width: 100%
+	@media screen and (min-width: 1024px)
+		position: relative
+		z-index: 1
+	@media screen and (max-width: 1023px)
+		width: auto
+		margin: 0 0 0 50px
+		padding: 0
+		.ue-menu
+			height: 100%
+			overflow: auto
+	@media screen and (max-width: 767px)
+		margin-left: 25px
+	@media screen and (max-width: 600px)
+		float: right
+		margin: 5px 0 0 0
+
+	/* ----------------------------------------
+	 Title nav
+	 ---------------------------------------- */
+	.title-nav
+		display: none
+		vertical-align: top
+		margin: 0
+		padding: 0 0 0 20px
+		font-size: 14px
+		font-weight: 700
+		line-height: 1
+		color: $dark-text
+		text-align: center
+		text-transform: uppercase
+		cursor: pointer
+		.icon
+			display: inline-block
+			vertical-align: top
+			width: 20px
+			margin: 0 0 5px 0
+			.i-bar
+				display: block
+				width: 100%
+				height: 4px
+				margin: 0 auto 3px auto
+				border-radius: 2px
+				background-color: $dark-text
+				&:last-child
+					margin-bottom: 0
+		.text
+			display: block
+			vertical-align: top
+			padding: 0
+			border-bottom: 3px solid transparent
+		@media screen and (max-width: 1023px)
+			display: inline-block
+		@media screen and (max-width: 600px)
+			.text
+				display: none
+
+	/* ----------------------------------------
+	 Box nav
+	 ---------------------------------------- */
+	.box-nav
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		margin: 0
+		text-align: center
+		@media screen and (max-width: 1023px)
+			position: fixed
+			top: 0
+			left: 0
+			transform: translateX(-100%)
+			width: 100%
+			max-width: 320px
+			height: 100%
+			padding: 45px 15px 15px
+			text-align: left
+			background-color: rgba(#000,0.85)
+			opacity: 0
+			z-index: 1100
+			+transition(all 0.25s)
+			&.active
+				opacity: 1
+				transform: translateX(0)
+		@media screen and (max-width: 520px)
+			max-width: 100%
+
+		ul, li, a
+			display: inline-block
+			vertical-align: top
+			margin: 0
+			padding: 0
+		li
+			position: relative
+			@media screen and (max-width: 1023px)
+				padding: 4px 0 4px 25px
+		a
+			font-size: 14px
+			font-weight: 400
+			color: $text-color
+			text-transform: uppercase
+			&:hover
+				color: $text-color
+			@media screen and (max-width: 1023px)
+				color: #fff
+				&:hover
+					color: $accent-color
+
+		//First-child
+		.menu-l1
+			> li
+				> a
+					.icon
+						display: none
+						height: 26px
+						text-align: center
+						img
+							display: inline-block
+							vertical-align: top
+							position: relative
+							top: 50%
+							transform: translateY(-50%)
+							max-height: 100%
+				.nav-plus
+					top: 6px
+				@media screen and (min-width: 1024px)
+					position: absolute
+					top: 0
+					left: -15000px
+					&.ue-menu-visible
+						position: relative
+						top: auto
+						left: auto
+					> a
+						padding: 0 20px
+						.icon
+							display: block
+						.text
+							display: inline-block
+							vertical-align: top
+							padding: 0 0 4px 0
+							border-bottom: 3px solid transparent
+					&:hover
+						> a
+							.text
+								border-bottom-color: $accent-color
+						.menu-l2
+							display: inline-block
+				@media screen and (max-width: 1023px)
+					width: 100%
+
+			//Sub menu (all)
+			ul
+				width: 100%
+				text-align: left
+				li, a
+					width: 100%
+				@media screen and (min-width: 1024px)
+					display: none
+					position: absolute
+					min-width: 155px
+					z-index: 2
+					li
+						&:hover
+							> a
+								color: #fff
+								background-color: $accent-color
+					a
+						padding: 5px 15px
+				@media screen and (max-width: 1023px)
+					display: none
+					&.active
+						display: inline-block
+
+			//Sub menu
+			.menu-l2
+				@media screen and (min-width: 1024px)
+					top: 100%
+					left: 20px
+					border: 1px solid #e7e7e7
+					background-color: #fff
+					> li
+						&:hover
+							.menu-l3
+								display: inline-block
+
+			//Third menu
+			.menu-l3
+				@media screen and (min-width: 1024px)
+					top: 0
+					left: 100%
+					background-color: $accent-color
+					a
+						color: #fff
+						&:hover
+							color: $dark-text
+
+	/* ----------------------------------------
+	 Float menu
+	 ---------------------------------------- */
+	.ue-floated-menu
+		display: inline-block
+		vertical-align: top
+		position: relative
+		margin: 0
+		&:hover
+			.drop-content
+				display: inline-block
+			.drop-toggle
+				.text
+					border-bottom-color: $accent-color
+		@media screen and (max-width: 1023px)
+			display: none
+
+		//Drop toggle
+		.drop-toggle
+			display: inline-block
+			vertical-align: top
+			margin: 3px 0 0 0
+			padding: 0 0 0 20px
+			font-size: 14px
+			font-weight: 400
+			line-height: 1
+			color: $dark-text
+			text-transform: uppercase
+			cursor: pointer
+			.icon
+				display: inline-block
+				vertical-align: top
+				width: 20px
+				margin: 0 0 8px 0
+				.i-bar
+					display: block
+					width: 100%
+					height: 4px
+					margin: 0 0 3px 0
+					border-radius: 2px
+					background-color: $dark-text
+					&:last-child
+						margin-bottom: 0
+			.text
+				display: block
+				vertical-align: top
+				padding: 0 0 4px 0
+				border-bottom: 3px solid transparent
+
+		//Drop content
+		.drop-content
+			display: none
+			position: absolute
+			top: 100%
+			right: 0
+			width: 100%
+			min-width: 155px
+			text-align: left
+			ul, li, a
+				width: 100%
+			a
+				padding: 5px 15px
+
+			.float-l1
+				border: 1px solid #e7e7e7
+				background-color: #fff
+				> li
+					//display: none
+					&.ue-menu-visible
+						display: inline-block
+					&:hover
+						> a
+							color: #fff
+							background: $accent-color
+						.float-l2
+							display: inline-block
+
+				ul
+					display: none
+					position: absolute
+					top: 0
+					right: 100%
+					border: none
+					background-color: $accent-color
+					a
+						color: #fff
+					> li
+						&:hover
+							> a
+								color: $dark-text
+
+				.float-l2
+					> li
+						&:hover
+							.float-l3
+								display: inline-block
+
+	/* ----------------------------------------
+	 Close menu
+	 ---------------------------------------- */
+	.close-menu
+		display: none
+		position: absolute
+		top: 10px
+		right: 10px
+		width: 28px
+		height: 28px
+		margin: 0
+		cursor: pointer
+		&:before, &:after
+			content: ''
+			position: absolute
+			top: 12px
+			left: 0
+			width: 28px
+			height: 3px
+			background: $accent-color
+		&:before
+			transform: rotate(-45deg)
+		&:after
+			transform: rotate(45deg)
+		@media screen and (max-width: 1023px)
+			display: inline-block

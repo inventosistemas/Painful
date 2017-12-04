@@ -1,0 +1,231 @@
+/* ========================================
+ *
+ * Checkout page
+ *
+ * ======================================== */
+
+/* ----------------------------------------
+ Content checkpoint
+ ---------------------------------------- */
+.content-checkpoint
+	width: 100%
+	margin: 15px 0 0 0
+	.linha
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		margin: 0 0 40px 0
+		border-top: 2px solid #b3b3b3
+		.box-step
+			position: relative
+			text-align: center
+			top: -2px
+			font-size: 14px
+			line-height: 1.2
+			font-weight: 400
+			color: #999
+			&:first-child
+				background-image: url('data:image/svg+xmlbase64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiLz48c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2ZmMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=')
+				background-size: 100%
+				background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(50%, #ffffff), color-stop(51%, rgba(255, 0, 0, 0)))
+				background-image: -moz-linear-gradient(left, #ffffff 50%, rgba(255, 0, 0, 0) 51%)
+				background-image: -webkit-linear-gradient(left, #ffffff 50%, rgba(255, 0, 0, 0) 51%)
+				background-image: linear-gradient(to right, #ffffff 50%, rgba(255, 0, 0, 0) 51%)
+			&:last-child
+				background-image: url('data:image/svg+xmlbase64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiLz48c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2ZmMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=')
+				background-size: 100%
+				background-image: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(50%, #ffffff), color-stop(51%, rgba(255, 0, 0, 0)))
+				background-image: -moz-linear-gradient(right, #ffffff 50%, rgba(255, 0, 0, 0) 51%)
+				background-image: -webkit-linear-gradient(right, #ffffff 50%, rgba(255, 0, 0, 0) 51%)
+				background-image: linear-gradient(to left, #ffffff 50%, rgba(255, 0, 0, 0) 51%)
+			span
+				display: block
+			.circulo
+				display: block
+				position: relative
+				width: 25px
+				height: 25px
+				top: -12px
+				margin: 0 auto
+				background: #fff
+				border: 2px solid #ccc
+				border-radius: 50%
+				outline: 10px solid #fff
+			&.active
+				color: $accent-color
+				.circulo
+					border-color: $accent-color
+
+/* ----------------------------------------
+ Default plataform
+ ---------------------------------------- */
+#retornoFinalizarCompra
+	.ordem-pagamento-revisao
+		ul
+			padding: 0
+		li
+			list-style: none
+
+.ordem-header,
+.ordem-footer
+	padding: 2em 1em
+
+.ordem-header .ordem-cinza,
+.ordem-footer .ordem-cinza
+	color: #000
+
+.ordem h3 .glyphicon-ok
+	color: #f66
+	font-size: 50%
+
+.ordem label
+	font-weight: normal
+	width: 100%
+
+.ordem .ordem-panel-esqueci
+	text-align: right
+	display: block
+	width: 100%
+
+.ordem .ordem-panel-esqueci a
+	margin-left: 1em
+
+.ordem .btn
+	text-transform: uppercase
+
+.ordem-botao-finalizar-bottom,
+.ordem-botao-finalizar-top
+	text-align: right
+	margin-bottom: 1em
+
+@media (max-width: 990px)
+	.ordem-botao-finalizar-top .btn-primary
+		display: none
+
+	.ordem-botao-finalizar-bottom
+		text-align: center
+		width: 100%
+
+
+.ordem-forma-pagamento i
+	font-size: 80%
+	font-style: normal
+	font-weight: normal
+
+.ordem-forma-pagamento .row
+	margin: 0
+
+.ordem-forma-pagamento .row .col-xs-12,
+.ordem-forma-pagamento .row .col-sm-6
+	padding: 0
+	margin-right: 15px
+	width: 40%
+
+.ordem-pagamento-revisao h5,
+.ordem-pagamento-entrega h5,
+.ordem-pagamento-concluido-revisao h5
+	font-weight: bold
+
+.ordem-pagamento-revisao ul,
+.ordem-pagamento-entrega ul,
+.ordem-pagamento-concluido-revisao ul
+	padding: 0
+
+.ordem-pagamento-revisao ul li,
+.ordem-pagamento-entrega ul li,
+.ordem-pagamento-concluido-revisao ul li
+	border-bottom: 1px solid #ebebeb
+	list-style: none
+	padding: 0.5em 1.0em 0.6em 0
+	/*barduk*/
+
+.ordem-pagamento-revisao ul li p,
+.ordem-pagamento-entrega ul li p,
+.ordem-pagamento-concluido-revisao ul li p
+	font-size: 90%
+
+.ordem-pagamento-revisao .ordem-pagamento-revisao-subtotal .row div:last-child,
+.ordem-pagamento-entrega .ordem-pagamento-revisao-subtotal .row div:last-child,
+.ordem-pagamento-concluido-revisao .ordem-pagamento-revisao-subtotal .row div:last-child
+	color: #b3b3b3
+	font-weight: bold
+	font-size: 120%
+
+.ordem-pagamento-revisao-subtotal .text-right
+	padding-right: 20px
+
+.ordem-pagamento-revisao-total-valor
+	text-align: right
+	/*padding-right: 20px*/
+
+.ordem-pagamento-revisao-total-valor i
+	font-size: 70%
+	font-style: normal
+	font-weight: normal
+
+.ordem-pagamento-entrega label
+	font-size: 90%
+
+.ordem-pagamento-concluido-forma span
+	color: #b3b3b3
+	display: block
+	font-size: 110%
+	font-weight: bold
+	margin: .2em 0
+
+.ordem-pagamento-concluido-revisao h5,
+.ordem-pagamento-concluido-revisao p
+	font-weight: normal
+
+.ordem-pagamento-concluido-revisao h5 span,
+.ordem-pagamento-concluido-revisao p span
+	color: #f66
+
+.ordem-pagamento-concluido-pedido span
+	color: #b3b3b3
+	display: block
+	margin: 1em 0 1em .5em
+
+.ordem-pagamento-concluido-pedido div
+	margin-top: 1em
+	text-align: center
+
+.ordem-pagamento-concluido-subtotal
+	font-weight: bold
+	font-size: 110%
+
+.ordem-pagamento-concluido-subtotal .row
+	margin: 0
+
+.ordem-pagamento-revisao-total .row
+	font-size: 26px
+
+.ordem-pagamento-revisao-total .col-xs-8,
+.ordem-pagamento-revisao-total .col-xs-4
+	padding: 0
+
+.ordem-pagamento-concluido-subtotal>div:first-child
+	color: #b3b3b3
+
+.ordem-pagamento-concluido-frete
+	color: #b3b3b3
+	font-weight: bold
+	font-size: 110%
+
+.ordem-footer
+	color: #999
+	background: none !important
+
+.ordem-footer div.col-md-3::first-line
+	color: #000
+
+.ordem h3.text-center
+	margin-bottom: 40px
+
+.contato .text-center span
+	color: #999
+	display: block
+
+.ordem-footer p
+	margin-top: 2em
+	font-size: 80%

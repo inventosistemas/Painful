@@ -1,0 +1,312 @@
+/* ========================================
+ *
+ * Cart page
+ *
+ * ======================================== */
+
+.content-cart
+	width: 100%
+	margin: 0
+
+	/* ----------------------------------------
+	 Cart box
+	 ---------------------------------------- */
+	.cart-box
+		width: 100%
+		margin: 0
+		border: 1px solid #eee
+
+		//Load
+		.fa-circle-o-notch
+			display: block
+			margin: 0 auto 15px
+
+		//Panel heading
+		.panel-heading
+			color: $dark-text
+			background-color: #f1f1f1
+			span
+				font-weight: 700
+
+		//Box item
+		.box-item
+			display: inline-block
+			vertical-align: top
+			width: 100%
+			margin: 0
+			padding: 15px
+
+			> div
+				float: left
+			.cart-lf
+				width: 50%
+				@media screen and (max-width: 767px)
+					width: 75%
+				@media screen and (max-width: 520px)
+					width: 100%
+			.cart-ct
+				width: 25%
+				@media screen and (max-width: 520px)
+					width: 100%
+			.cart-rt
+				width: 25%
+				@media screen and (max-width: 767px)
+					width: 100%
+
+			//Box image
+			.box-img
+				float: left
+				width: 90px
+				margin: 0
+				padding: 0 15px 0 0
+				text-align: center
+				img
+					display: inline-block
+					vertical-align: top
+
+			//Box info
+			.box-info
+				display: block
+				margin: 0 0 0 90px
+				padding: 0 10px 0 0
+				p
+					display: block
+					margin: 0
+					font-size: 12px
+					color: $light-text
+					&.name
+						margin-bottom: 5px
+						color: $dark-text
+						font-size: 14px
+						font-weight: 700
+					&.price-unit
+						span
+							font-weight: 700
+							color: $p-price-color
+				@media screen and (max-width: 520px)
+					padding-right: 0
+
+			//Remove product
+			.glyphicon-trash
+				display: inline-block
+				vertical-align: top
+				width: 75px
+				margin: 10px 0 0 0
+				font-size: 12px
+				color: $accent-color
+				text-align: center
+				&:before, span
+					display: inline-block
+					vertical-align: middle
+				&:before
+					margin-right: 5px
+				span
+					font-family: $main-font
+
+			//Form quantity
+			.form-qtd
+				display: inline-block
+				vertical-align: top
+				width: 100%
+				margin: 0
+				text-align: center
+				.inner-qtd
+					display: inline-block
+					vertical-align: top
+				label, a
+					display: block
+					margin: 0
+				label
+					font-size: 14px
+					font-weight: 700
+				.textbox
+					width: 100%
+					max-width: 70px
+					height: 35px
+					margin: 5px 0 5px 0
+					text-align: center
+				a
+					font-size: 11px
+					text-transform: uppercase
+					color: $accent-color
+				@media screen and (max-width: 520px)
+					margin-top: 10px
+					padding-top: 15px
+					border-top: 1px solid #f9f9f9
+					label
+						font-size: 12px
+					label, .textbox, a
+						display: inline-block
+						vertical-align: middle
+						margin: 0 5px 0 0
+					a
+						margin-right: 0
+
+			//Box value
+			.box-value
+				text-align: right
+				p
+					display: block
+					margin: 0 0 4px 0
+					font-size: 14px
+					&:last-child
+						margin-bottom: 0
+					&#totalitem
+						span
+							font-size: 16px
+							font-weight: 700
+							color: $p-price-color
+				@media screen and (max-width: 767px)
+					margin-top: 15px
+					padding: 15px
+					text-align: left
+					background-color: #f9f9f9
+
+		//Divisor cart
+		.divisor-cart
+			display: inline-block
+			vertical-align: top
+			width: 100%
+			margin: 0
+			border-top: 1px solid #eee
+
+	/* ----------------------------------------
+	 Cart order
+	 ---------------------------------------- */
+	.cart-order
+		margin: 0
+		.row
+			> div
+				float: none
+				display: inline-block
+				vertical-align: middle
+
+		//Title order
+		.t-order
+			display: block
+			margin: 0
+			font-size: 18px
+			font-weight: 600
+			text-transform: uppercase
+			color: $dark-text
+
+		//Order total
+		.order-total
+			display: inline-block
+			vertical-align: top
+			width: 100%
+			margin: 0
+			text-align: right
+			p
+				display: block
+				margin: 0
+				font-size: 14px
+				span
+					font-weight: 700
+				&.t-price
+					font-size: 22px
+
+/* ----------------------------------------
+ Footer cart
+ ---------------------------------------- */
+.footer-cart
+	width: 100%
+	margin: 0
+	.inner-ft
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		margin: 0
+		padding: 0 0 25px 0
+		border-bottom: 1px solid #eee
+
+	.cart-cep, .box-coupon
+		display: inline-block
+		vertical-align: top
+		margin: 25px 0 0 0
+		@media screen and (max-width: 600px)
+			width: 100%
+			text-align: center
+
+		.box-title
+			display: inline-block
+			vertical-align: top
+			padding: 0 20px 0 0
+			p
+				display: block
+				margin: 0
+				font-size: 14px
+				line-height: 1
+				&.title
+					margin-bottom: 1px
+					font-size: 16px
+					font-weight: 700
+					color: $accent-color
+			@media screen and (max-width: 1199px)
+				display: block
+				margin-bottom: 10px
+				padding-right: 0
+		.box-form
+			display: inline-block
+			vertical-align: top
+			.textbox, .get-cep, .btn
+				display: inline-block
+				vertical-align: middle
+			.textbox
+				margin-right: 10px
+			.btn
+				display: inline-block
+				vertical-align: middle
+				margin: 0
+				font-size: 14px
+				text-align: center
+
+	//Cep cart
+	.cart-cep
+		.box-form
+			.textbox
+				padding-left: 5px
+				padding-right: 5px
+				text-align: center
+			#CEPCarrinho
+				width: 90px
+				margin-right: 0
+			#CEPCompCarrinho
+				width: 60px
+			.get-cep
+				margin-left: 10px
+				font-size: 12px
+				color: $accent-color
+			@media screen and (max-width: 767px)
+				.get-cep
+					display: block
+					margin-left: 0
+
+	//Box coupon
+	.box-coupon
+		float: right
+
+	//Cart bottom
+	.cart-bt
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		margin: 20px 0 0 0
+		text-align: right
+		.box-agree
+			label, .box-btn
+				display: block
+			label
+				span, input
+					display: inline-block
+					vertical-align: middle
+				input
+					margin-right: 5px
+			.box-btn
+				margin: 10px 0 0 0
+		@media screen and (max-width: 600px)
+			text-align: center
+		@media screen and (max-width: 520px)
+			.box-agree
+				label
+					font-size: 13px

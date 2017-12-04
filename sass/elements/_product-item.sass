@@ -1,0 +1,156 @@
+/* ========================================
+ *
+ * Product item
+ *
+ * ======================================== */
+
+.product-item
+	float: none
+	display: inline-block
+	vertical-align: top
+	margin: 20px 0
+	padding: 0 10px
+	&.slick-slide
+		float: left
+
+	/* ----------------------------------------
+	 Inner product
+	 ---------------------------------------- */
+	.inner-prod
+		display: inline-block
+		vertical-align: top
+		position: relative
+		width: 100%
+		margin: 0
+		padding: 6px
+		border: 1px solid transparent
+		+transition(border-color 0.25s)
+		&:hover
+			border-color: #e4e4e4
+			.box-btn
+				opacity: 1
+
+	.product-img, .product-info
+		width: 100%
+		margin: 0
+
+	/* ----------------------------------------
+	 Product image
+	 ---------------------------------------- */
+	.product-img
+		position: relative
+		text-align: center
+		a
+			display: inline-block
+			vertical-align: top
+			margin: 0
+		.p-promo
+			position: absolute
+			top: 0
+			right: 0
+			padding: 5px 5px
+			font-size: 11px
+			font-weight: 600
+			color: #fff
+			text-transform: uppercase
+			&.percentage
+				background-color: $promo-perc
+			&.new
+				background: $promo-news
+
+	/* ----------------------------------------
+	 Product info
+	 ---------------------------------------- */
+	.product-info
+		padding: 0
+
+	/* ----------------------------------------
+	 Title
+	 ---------------------------------------- */
+	.title
+		width: 100%
+		min-height: 50px
+		margin: 10px 0 6px 0
+		font-size: $p-title-size
+		line-height: $p-title-line
+		font-weight: $p-title-weight
+		font-family: $p-title-family
+		color: $p-title-color
+		text-transform: uppercase
+		a
+			color: inherit
+			font-size: inherit
+			font-weight: inherit
+		&:hover
+			color: $p-title-color-hv
+
+	/* ----------------------------------------
+	 Brand
+	 ---------------------------------------- */
+	.brand
+		display: none
+
+	/* ----------------------------------------
+	 Box price
+	 ---------------------------------------- */
+	.box-price
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		min-height: 54px
+		margin: 0
+		line-height: 1
+		text-decoration: none
+		span, s
+			display: block
+		.price-old
+			margin-bottom: 1px
+			font-size: $p-price-o-size
+			font-weight: $p-price-o-weight
+			color: $p-price-o-color
+		.price
+			font-size: $p-price-size
+			font-weight: $p-price-weight
+			color: $p-price-color
+		.installment
+			margin-top: 7px
+			font-size: $p-ins-size
+			font-weight: $p-ins-weight
+			color: $p-ins-color
+
+	/* ----------------------------------------
+	 Box button
+	 ---------------------------------------- */
+	.box-btn
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		margin: 16px 0 0 0
+		a
+			display: inline-block
+			vertical-align: top
+			width: 100%
+			margin: 0
+			padding: 13px 5px
+			font-size: 14px
+			line-height: 1
+			font-weight: 700
+			text-transform: uppercase
+			text-align: center
+			text-decoration: none
+			border-radius: $button-radius
+		.btn-buy
+			color: $buy-color
+			background-color: $buy-bg
+			&:hover
+				color: $buy-color-hv
+				background-color: $buy-bg-hv
+		.btn-sold
+			color: $sold-color
+			background-color: $sold-bg
+			&:hover
+				color: $sold-color-hv
+				background-color: $sold-bg-hv
+		@media screen and (min-width: 1025px)
+			opacity: 0
+			+transition(all 0.25s)

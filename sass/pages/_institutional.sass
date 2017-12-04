@@ -1,0 +1,60 @@
+/* ========================================
+ *
+ * Institutional page
+ *
+ * ======================================== */
+
+.content-institutional
+	width: 100%
+	margin: 0
+
+	/* ----------------------------------------
+	 Box institutional
+	 ---------------------------------------- */
+	.box-institutional
+		width: 100%
+		margin: 0
+		p
+			a
+				color: $accent-color
+
+	/* ----------------------------------------
+	 Panel
+	 ---------------------------------------- */
+	.panel
+		width: 100%
+		border: none
+		border-bottom: 1px solid #eee
+		box-shadow: none
+		.panel-heading
+			width: 100%
+			margin: 0
+			padding: 15px 15px
+			border: none
+			box-shadow: none
+			.panel-title
+				font-size: 16px
+				font-weight: 600
+				color: $light-text
+			.cursor-toggle
+				position: relative
+				span
+					position: relative
+					top: auto
+					left: auto
+					display: inline-block
+					vertical-align: middle
+				.nav-plus
+					margin-right: 10px
+				&[aria-expanded="true"]
+					.nav-plus
+						&:after
+							opacity: 0
+		.panel-collapse
+			border: none
+			border-top: 1px solid #eee
+			box-shadow: none
+			> .panel-body
+				border: none
+				box-shadow: none
+

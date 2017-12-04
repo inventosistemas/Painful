@@ -1,0 +1,61 @@
+/* ========================================
+ *
+ * Reset
+ *
+ * ======================================== */
+
+body
+	font-family: $main-font
+
+/* ----------------------------------------
+ Elements
+ ---------------------------------------- */
+a, input, button, textarea
+	&:hover, &:focus, &:active
+		outline: 0 !important
+
+a
+	color: $text-color
+	&:hover
+		color: $accent-color
+
+img
+	max-width: 100%
+
+/* ----------------------------------------
+ Inputs
+ ---------------------------------------- */
+input[type="text"], input[type="email"], input[type="password"], button, textarea, .form-control
+	color: $text-color
+	+placeholder(#b8b8b8)
+	box-shadow: none
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+	&:focus
+		box-shadow: none
+
+input[type="text"], input[type="email"], input[type="password"], textarea, .form-control
+	padding: 5px 15px
+	font-size: 14px
+	color: $text-color
+	border: 1px solid #ccc
+	border-radius: 0
+	background-color: #fff
+	+placeholder($light-text)
+
+input[type="checkbox"]
+	margin: 0
+
+/* ----------------------------------------
+ Buttons
+ ---------------------------------------- */
+.btn
+	border: none
+	border-radius: 0
+	color: $button-color
+	border-radius: $button-radius
+	background-color: $button-bg
+	&:hover
+		color: $button-color-hv
+		background-color: $button-bg-hv
