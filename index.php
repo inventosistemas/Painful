@@ -596,7 +596,7 @@
 		<!-- Instagram -->
 		<div class="content-instagram">
 			<div class="container">
-				<h2 class="title"><img src="images/site/icones/midias/icon-ig.png" alt="Instagram"><span>/malinabeauty</span></h2>
+				<h2 class="title"><img src="images/site/icones/midias/icon-ig.png" alt="Instagram"><span>/painfulpleasuresbr</span></h2>
 				<div id="instafeed"></div>
 			</div>
 		</div>
