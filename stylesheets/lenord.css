@@ -1,0 +1,28 @@
+#contact-link{
+    background:none;
+    margin-top: 6px;
+    float: right;
+}
+
+.container{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.nav{
+    background:#eee;
+    color: #eee;
+    margin-bottom: 0;
+    padding-left: 0;
+    z-index: 99999;
+    position: fixed;
+    height: 48px;
+    width: 100%;
+    border-bottom: 9px solid #22428e;
+    list-style: none;
+}
+
+.row{
+    margin: 0px;
+    position: relative;
+}
