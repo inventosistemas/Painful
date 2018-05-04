@@ -146,8 +146,8 @@
 <body>
 
 	<?php
-		$dadosEmpresa = getRest(str_replace("{IDParceiro}","2", $endPoint['dadoscadastrais']));
-		$endCadastral = getRest(str_replace("{IDParceiro}","2", $endPoint['endcadastral']));
+		$dadosEmpresa = getRest(str_replace("{IDParceiro}","1", $endPoint['dadoscadastrais']));
+		$endCadastral = getRest(str_replace("{IDParceiro}","1", $endPoint['endcadastral']));
 		$footerData = getRest($endPoint['rodape']);
 	?>
 
