@@ -69,6 +69,7 @@
 	<link href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/slick.css" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/personalized.css" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/lenord.css" rel="stylesheet" type="text/css">
 
 	<!-- Load jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -153,6 +154,24 @@
 
 	<!-- Master Header -->
 	<header id="header">
+
+		<div class="nav">
+			<div class="container">
+				<div class="row">
+					<nav>
+						<div id="contact-link">
+							<a href="LINK PARA MEUS PEDIDOS">Meus Pedidos</a>
+						</div>
+						<div id="contact-link">
+							<a href="LINK PARA AJUDA">Ajuda</a>
+						</div>
+						<div id="contact-link">
+							<a href="LINK PARA CONTATO">Contato</a>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>	
 
 		<!-- Upper -->
 		<div class="upper">
