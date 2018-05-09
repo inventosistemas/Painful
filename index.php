@@ -190,6 +190,7 @@
 				</div>
 			</div>
 		</div>	
+
 		<!-- Upper -->
 		<div class="upper">
 			<div class="container">
