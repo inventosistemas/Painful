@@ -1,6 +1,5 @@
 <?php
 	define('HoorayWeb', TRUE);
-
 	include_once ("p_settings.php");
 	$phpPost = filter_input_array(INPUT_POST);
 	session_start();
@@ -56,7 +55,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name ="description" content="">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>Malina</title>
+	<title>Painful Pleausres Brasil</title>
 	<link rel="shortcut icon" href="images/favicon/favicon.ico">
 	<!--<link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
@@ -69,6 +68,16 @@
 	<link href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/slick.css" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/personalized.css" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/lenord.css" rel="stylesheet" type="text/css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-73086747-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-73086747-1');
+		</script>
 
 	<!-- Load jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -142,6 +151,16 @@
 				});
 		}
 	</script>
+		<!--Start of Zendesk Chat Script-->
+						<!--<script type="text/javascript">
+						window.$zopim||(function(d,s){var z=$zopim=function(c){
+						z._.push(c)},$=z.s=
+						d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+						_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+						$.src='https://v2.zopim.com/?5QhRFHYYAzDd0mPhfxD7QC94GjTeywpL';z.t=+new Date;$.
+						type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+						</script>-->
+		<!--End of Zendesk Chat Script-->
 </head>
 <body>
 
@@ -154,6 +173,23 @@
 	<!-- Master Header -->
 	<header id="header">
 
+	<div class="nav">
+			<div class="container">
+				<div class="row">
+					<nav>
+						<div id="contact-link">
+							<a href="LINK PARA MEUS PEDIDOS">Meus Pedidos</a>
+						</div>
+						<div id="contact-link">
+							<a href="LINK PARA AJUDA">Ajuda</a>
+						</div>
+						<div id="contact-link">
+							<a href="LINK PARA CONTATO">Contato</a>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>	
 		<!-- Upper -->
 		<div class="upper">
 			<div class="container">
@@ -187,7 +223,7 @@
 						</div>
 					</div>
 					<div class="link-up col-xs-4 col-md-3">
-						<a href="#"><span>Seja um franqueado</span></a>
+						<a href="http://painful.inventosistemas.com.br/v1/cadastro/newsletter"><span>Seja um franqueado</span></a>
 					</div>
 				</div>
 			</div>
@@ -221,7 +257,7 @@
 									?>
 										<li class="ue-list-option">
 											<a href="/secao?id=<?= $secao['SecaoID'] ?>">
-												<span class="icon"><img src="<?= htmlentities($secao['']) ?>"></span>
+												<span class="icon"><img src="<?= htmlentities($secao['Imagem']) ?>"></span>
 												<span class="text"><?= htmlentities($secao['Descricao']) ?></span>
 											</a>
 											<?php if($secao['Categorias']) : ?>
@@ -607,9 +643,11 @@
 				<div class="inner-ft">
 					<div class="ft-col col-xs-6">
 						<div class="logo-ft">
+							<!-- retira logo footer
 							<a href="/" title="<?= $dadosEmpresa['Fantasia'] ?>">
 								<img src="/images/site/logo-w.png" alt="<?= $dadosEmpresa['Fantasia'] ?>" />
 							</a>
+							-->
 							<?php
 								foreach ((array) $footerData as $aboutFt) {
 							 		if($aboutFt['Descricao'] == 'Sobre a Malina') {
