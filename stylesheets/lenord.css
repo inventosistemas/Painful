@@ -4,6 +4,15 @@
     float: right;
 }
 
+#contact-link a{
+    color: #7c7c7c;
+    margin-left: 8px;
+    font: 500 12px/12px "Roboto", sans-serif;
+    line-height: 1.66667;
+    text-shadow: none;
+    padding: 8px 10px 11px 10px;
+}
+
 .container{
     margin-right: auto;
     margin-left: auto;

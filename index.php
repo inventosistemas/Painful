@@ -239,7 +239,23 @@
 							<img src="/images/site/logo.png" alt="<?= $dadosEmpresa['Fantasia'] ?>" />
 						</a>
 					</div>
-					<nav class="main-navigation">
+					<div class="box-search">
+							<form name="termobusca" method="get" action="/busca">
+								<!-- <span class="btn-search" onclick="document.buscaresponsiva.submit();"></span> -->
+								<span class="btn-search" onclick="document.termobusca.submit();"></span>
+								<input class="textbox" type="text" name="termobusca" placeholder="O que você procura?" required="required" />
+							</form>
+						</div>
+					<div class="header-rt">
+						<?php if (!in_array($paginas[1], ['carrinho', 'checkout'])) : ?>
+								<div class="box-cart">
+									<a href="#modal-cart" data-toggle="modal"><span class="cart-qtd"></span></a>
+								</div>
+						<?php endif; ?>
+					</div>
+				</div>
+				<div class="inner-header">
+				<nav class="main-navigation">
 						<a class="menu-mb title-nav">
 							<div class="icon">
 								<span class="i-bar"></span>
@@ -333,20 +349,6 @@
 							</div>
 						</div>
 					</nav>
-					<div class="header-rt">
-						<?php if (!in_array($paginas[1], ['carrinho', 'checkout'])) : ?>
-								<div class="box-cart">
-									<a href="#modal-cart" data-toggle="modal"><span class="cart-qtd"></span></a>
-								</div>
-						<?php endif; ?>
-						<div class="box-search">
-							<form name="termobusca" method="get" action="/busca">
-								<!-- <span class="btn-search" onclick="document.buscaresponsiva.submit();"></span> -->
-								<span class="btn-search" onclick="document.termobusca.submit();"></span>
-								<input class="textbox" type="text" name="termobusca" placeholder="O que você procura?" required="required" />
-							</form>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
