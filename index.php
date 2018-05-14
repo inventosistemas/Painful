@@ -191,45 +191,6 @@
 			</div>
 		</div>	
 
-		<!-- Upper -->
-		<div class="upper">
-			<div class="container">
-				<div class="inner-upper">
-					<div class="midias-up col-xs-3 col-md-3">
-						<?php
-							foreach ((array) $footerData as $socialFt) :
-								if($socialFt['Descricao'] == 'Social') :
-									foreach ((array) $socialFt['Itens'] as $socialItem) :
-						?><a href="<?= $socialItem['Html'] ?>"><?= $socialItem['Descricao'] ?></a><?php
-									endforeach;
-								endif;
-							endforeach;
-						?>
-					</div>
-					<div class="customer-up col-xs-5 col-md-6">
-						<div class="box-icon phone">
-							<div class="drop-toggle icon">
-								<img src="images/site/icones/elements/icon-phone.png" alt="Telefone">
-							</div>
-							<a href="tel:+55<?= mascara(substr($dadosEmpresa['DDDTelefone'],-2) . $dadosEmpresa['Telefone'], "(##) ####-####") ?>" class="drop-content"><strong>SAC:</strong> <?= mascara(substr($dadosEmpresa['DDDTelefone'],-2) . $dadosEmpresa['Telefone'], "(##) ####-####") ?></a>
-						</div>
-						<div class="box-icon login">
-							<?php if (!empty($dadosLogin['ID']) && $dadosLogin['ID'] > 0) :
-									$nomeUsuario = explode(" ", $dadosLogin['Parceiro']['RazaoSocial']);
-							?>
-								<a href="/minhaconta"><span class="icon glyphicon glyphicon-user"></span><span class="hidden-xs hidden-sm">Olá <?= $nomeUsuario[0] ?></span></a> 
-							<?php else : ?>    
-								<a href="#modal-login" data-toggle="modal" id="link-login"><span class="icon glyphicon glyphicon-user"></span><span class="hidden-xs hidden-sm">Login</span></a>
-							<?php endif; ?>
-						</div>
-					</div>
-					<div class="link-up col-xs-4 col-md-3">
-						<a href="http://painful.inventosistemas.com.br/v1/cadastro/newsletter"><span>Seja um franqueado</span></a>
-					</div>
-				</div>
-			</div>
-		</div>
-
 		<!-- Header -->
 		<div class="header">
 			<div class="container">
