@@ -191,45 +191,6 @@
 			</div>
 		</div>	
 
-		<!-- Upper -->
-		<div class="upper">
-			<div class="container">
-				<div class="inner-upper">
-					<div class="midias-up col-xs-3 col-md-3">
-						<?php
-							foreach ((array) $footerData as $socialFt) :
-								if($socialFt['Descricao'] == 'Social') :
-									foreach ((array) $socialFt['Itens'] as $socialItem) :
-						?><a href="<?= $socialItem['Html'] ?>"><?= $socialItem['Descricao'] ?></a><?php
-									endforeach;
-								endif;
-							endforeach;
-						?>
-					</div>
-					<div class="customer-up col-xs-5 col-md-6">
-						<div class="box-icon phone">
-							<div class="drop-toggle icon">
-								<img src="images/site/icones/elements/icon-phone.png" alt="Telefone">
-							</div>
-							<a href="tel:+55<?= mascara(substr($dadosEmpresa['DDDTelefone'],-2) . $dadosEmpresa['Telefone'], "(##) ####-####") ?>" class="drop-content"><strong>SAC:</strong> <?= mascara(substr($dadosEmpresa['DDDTelefone'],-2) . $dadosEmpresa['Telefone'], "(##) ####-####") ?></a>
-						</div>
-						<div class="box-icon login">
-							<?php if (!empty($dadosLogin['ID']) && $dadosLogin['ID'] > 0) :
-									$nomeUsuario = explode(" ", $dadosLogin['Parceiro']['RazaoSocial']);
-							?>
-								<a href="/minhaconta"><span class="icon glyphicon glyphicon-user"></span><span class="hidden-xs hidden-sm">Olá <?= $nomeUsuario[0] ?></span></a> 
-							<?php else : ?>    
-								<a href="#modal-login" data-toggle="modal" id="link-login"><span class="icon glyphicon glyphicon-user"></span><span class="hidden-xs hidden-sm">Login</span></a>
-							<?php endif; ?>
-						</div>
-					</div>
-					<div class="link-up col-xs-4 col-md-3">
-						<a href="http://painful.inventosistemas.com.br/v1/cadastro/newsletter"><span>Seja um franqueado</span></a>
-					</div>
-				</div>
-			</div>
-		</div>
-
 		<!-- Header -->
 		<div class="header">
 			<div class="container">
@@ -353,86 +314,6 @@
 			</div>
 		</div>
 	</header>
-
-	<!-- Fixed header -->
-	<div id="fixed-header">
-		<div class="container">
-			<div class="logo-fx">
-				<a href="/" title="<?= $dadosEmpresa['Fantasia'] ?>">
-					<img src="/images/site/logo-w.png" alt="<?= $dadosEmpresa['Fantasia'] ?>" />
-				</a>
-			</div>
-			<div class="customer-up">
-				<div class="box-icon phone">
-					<div class="drop-toggle icon">
-						<img src="images/site/icones/elements/icon-phone.png" alt="Telefone">
-					</div>
-					<a href="tel:+55<?= mascara(substr($dadosEmpresa['DDDTelefone'],-2) . $dadosEmpresa['Telefone'], "(##) ####-####") ?>" class="drop-content"><strong>SAC:</strong> <?= mascara(substr($dadosEmpresa['DDDTelefone'],-2) . $dadosEmpresa['Telefone'], "(##) ####-####") ?></a>
-				</div>
-			</div>
-			<div class="fixed-nav">
-				<div class="drop-toggle title-nav">
-					<div class="icon">
-						<span class="i-bar"></span>
-						<span class="i-bar"></span>
-						<span class="i-bar"></span>
-					</div>
-					<span class="text">Categorias</span>
-				</div>
-				<div class="drop-content box-nav">
-					<ul class="menu-l1">
-						<?php
-							$menuSite = getRest($endPoint['menu']);
-							foreach ((array) $menuSite as $secao) :
-						?>
-							<li>
-								<a href="/secao?id=<?= $secao['SecaoID'] ?>">
-									<span class="icon"><img src="<?= htmlentities($secao['']) ?>"></span>
-									<span class="text"><?= htmlentities($secao['Descricao']) ?></span>
-								</a>
-								<?php if($secao['Categorias']) : ?>
-									<span class="drop-toggle nav-plus"></span>
-									<ul class="drop-content menu-l2">
-								<?php endif; ?>
-								<?php foreach ((array) $secao['Categorias'] as $categoria) : ?>
-									<li>
-										<a href="/categoria?id=<?= $categoria['ID'] ?>"><?= htmlentities($categoria['Descricao']) ?></a>
-										<?php if($categoria['Categorias']) : ?>
-											<span class="drop-toggle nav-plus"></span>
-											<ul class="drop-content menu-l3">
-										<?php endif; ?>
-										<?php foreach ((array) $categoria['Categorias'] as $subcategoria) : ?>
-												<li><a href="/categoria?id=<?= $subcategoria['ID'] ?>"><?= htmlentities($subcategoria['Descricao']) ?></a></li>
-										<?php endforeach; ?>
-										<?php if($categoria['Categorias']) : ?>
-											</ul>
-										<?php endif; ?>
-									</li>
-									<?php endforeach; ?>
-								<?php if($secao['Categorias']) : ?>
-									</ul>
-								<?php endif; ?>
-							</li>
-						<?php endforeach; ?>
-					</ul>
-				</div>
-			</div>
-			<div class="header-rt">
-				<?php if (!in_array($paginas[1], ['carrinho', 'checkout'])) : ?>
-						<div class="box-cart">
-							<a href="#modal-cart" data-toggle="modal"><span class="cart-qtd"></span></a>
-						</div>
-				<?php endif; ?>
-				<div class="box-search">
-					<form name="termobuscafixo" method="get" action="/busca">
-						<!-- <span class="btn-search" onclick="document.buscaresponsiva.submit();"></span> -->
-						<span class="btn-search" onclick="document.termobuscafixo.submit();"></span>
-						<input class="textbox" type="text" name="termobuscafixo" placeholder="O que você procura?" required="required" />
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<!-- Content -->
 	<?php

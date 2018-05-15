@@ -1,6 +1,6 @@
 #contact-link{
     background:none;
-    margin-top: 6px;
+    margin-top: 9px;
     float: right;
 }
 
@@ -24,7 +24,7 @@
     margin-bottom: 0;
     padding-left: 0;
     z-index: 99999;
-    position: fixed;
+    /* position: fixed; */
     height: 48px;
     width: 100%;
     border-bottom: 9px solid #22428e;
