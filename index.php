@@ -178,13 +178,13 @@
 				<div class="row">
 					<nav>
 						<div id="contact-link">
-							<a href="LINK PARA MEUS PEDIDOS">Meus Pedidos</a>
+							<a href="LINK PARA CONTATO">Contato</a>
 						</div>
 						<div id="contact-link">
 							<a href="LINK PARA AJUDA">Ajuda</a>
 						</div>
 						<div id="contact-link">
-							<a href="LINK PARA CONTATO">Contato</a>
+							<a href="LINK PARA MEUS PEDIDOS">Meus Pedidos</a>
 						</div>
 					</nav>
 				</div>
