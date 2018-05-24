@@ -41,48 +41,6 @@
 		<?php endforeach; ?>
 	</section>
 
-	<!-- Content mosaic -->
-	<section class="content-mosaic">
-		<div class="container">
-			<div class="inner-mosaic">
-				<div class="m-col">
-					<?php
-						$showcaseColumn = array ( // larguras das colunas da vitrine
-							1 => 'col-xs-12',
-							2 => 'col-xs-12',
-							3 => 'col-xs-6',
-							4 => 'col-xs-6'
-						);
-						$showcaseCounter = 1;
-						foreach ((array) $showcaseData as $showcase) :
-							if (in_array($showcaseCounter, [3,5])) // gera uma nova linha nos itens 4 e 6
-							{
-								echo '</div><div class="m-col">';
-							}
-							$linkVitrine = "#";    
-							if (!empty($showcase['Produto'])) {
-								$linkVitrine = "/produto?id=" . $showcase['Produto']['ID'];
-							} elseif (!empty($showcase['BlogArtigo'])) {
-								$linkVitrine = "/blogpost?id=" . $showcase['BlogArtigo']['ID'];
-							} elseif (!empty($showcase['Categoria'])) {
-								$linkVitrine = "/categoria?id=" . $showcase['Categoria']['ID'];
-							} elseif (!empty($showcase['Marca'])) {
-								$linkVitrine = "/blogpost?id=" . $showcase['Marca']['ID'];
-							}
-					?>
-						<div class="<?= $showcaseColumn[$showcaseCounter] ?>">
-							<div class="item">
-								<a href="<?= $linkVitrine ?>">
-									<img src="<?= $showcase['UrlImagem'] ?>" alt="<?= $showcase['Titulo'] ?>">
-								</a>
-							</div>
-						</div>
-					<?php $showcaseCounter ++; endforeach; ?>
-				</div>
-			</div>
-		</div>
-	</section>
-
 	<!-- Content featured -->
 	<section class="content-featured content-slider">
 		<div class="container">
