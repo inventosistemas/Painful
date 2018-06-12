@@ -526,9 +526,9 @@
 							-->
 							<?php
 								foreach ((array) $footerData as $aboutFt) {
-							 		if($aboutFt['Descricao'] == 'Sobre a Malina') {
+							 		if($aboutFt['Descricao'] == 'Sobre') {
 								 		foreach ((array) $aboutFt['Itens'] as $aboutItem) {
-											if($aboutItem['Descricao'] == 'Malina') {
+											if($aboutItem['Descricao'] == 'sobre') {
 							?>
 								<p><?= $aboutItem['Html'] ?></p>
 							<?php
@@ -546,9 +546,9 @@
 							-->
 							<?php
 								foreach ((array) $footerData as $aboutFt) {
-							 		if($aboutFt['Descricao'] == 'Sobre a Malina') {
+							 		if($aboutFt['Descricao'] == 'Produtos') {
 								 		foreach ((array) $aboutFt['Itens'] as $aboutItem) {
-											if($aboutItem['Descricao'] == 'Malina') {
+											if($aboutItem['Descricao'] == 'produtos') {
 							?>
 								<p><?= $aboutItem['Html'] ?></p>
 							<?php
@@ -566,9 +566,9 @@
 							-->
 							<?php
 								foreach ((array) $footerData as $aboutFt) {
-							 		if($aboutFt['Descricao'] == 'Sobre a Malina') {
+							 		if($aboutFt['Descricao'] == 'Acesso Rápido') {
 								 		foreach ((array) $aboutFt['Itens'] as $aboutItem) {
-											if($aboutItem['Descricao'] == 'Malina') {
+											if($aboutItem['Descricao'] == 'acessorapido') {
 							?>
 								<p><?= $aboutItem['Html'] ?></p>
 							<?php
@@ -586,9 +586,9 @@
 							-->
 							<?php
 								foreach ((array) $footerData as $aboutFt) {
-							 		if($aboutFt['Descricao'] == 'Sobre a Malina') {
+							 		if($aboutFt['Descricao'] == 'Precisa de Ajuda') {
 								 		foreach ((array) $aboutFt['Itens'] as $aboutItem) {
-											if($aboutItem['Descricao'] == 'Malina') {
+											if($aboutItem['Descricao'] == 'precisadeajuda') {
 							?>
 								<p><?= $aboutItem['Html'] ?></p>
 							<?php
