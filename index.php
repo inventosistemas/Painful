@@ -673,8 +673,8 @@
 					</div>
 					<div class="item">
 						<h2>Desenvolvimento</h2>
-						<a href="http://seriedesign.com.br/" target="_blank">
-							<img src="/images/site/logo-seriedesign.png" alt="SERI.E DESIGN">
+						<a href="https://lenord.com.br/" target="_blank">
+							<img src="/images/site/logo-lenord.jpg" alt="Lenord">
 						</a>
 					</div>
 				</div>
