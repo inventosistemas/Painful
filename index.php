@@ -517,73 +517,8 @@
 		<div class="footer">
 			<div class="container">
 				<div class="inner-ft">
-					<div class="ft-col col-xs-6">
+					<div class="ft-col col-xs-3">
 						<div class="logo-ft">
-							<!-- retira logo footer
-							<a href="/" title="<?= $dadosEmpresa['Fantasia'] ?>">
-								<img src="/images/site/logo-w.png" alt="<?= $dadosEmpresa['Fantasia'] ?>" />
-							</a>
-							-->
-							<?php
-								foreach ((array) $footerData as $aboutFt) {
-							 		if($aboutFt['Descricao'] == 'Sobre') {
-								 		foreach ((array) $aboutFt['Itens'] as $aboutItem) {
-											if($aboutItem['Descricao'] == 'sobre') {
-							?>
-								<p><?= $aboutItem['Html'] ?></p>
-							<?php
-											}
-										}
-									}
-								}
-							?>
-						</div>
-						<div class="logo-ft">
-							<!-- retira logo footer
-							<a href="/" title="<?= $dadosEmpresa['Fantasia'] ?>">
-								<img src="/images/site/logo-w.png" alt="<?= $dadosEmpresa['Fantasia'] ?>" />
-							</a>
-							-->
-							<?php
-								foreach ((array) $footerData as $aboutFt) {
-							 		if($aboutFt['Descricao'] == 'Produtos') {
-								 		foreach ((array) $aboutFt['Itens'] as $aboutItem) {
-											if($aboutItem['Descricao'] == 'produtos') {
-							?>
-								<p><?= $aboutItem['Html'] ?></p>
-							<?php
-											}
-										}
-									}
-								}
-							?>
-						</div>
-						<div class="logo-ft">
-							<!-- retira logo footer
-							<a href="/" title="<?= $dadosEmpresa['Fantasia'] ?>">
-								<img src="/images/site/logo-w.png" alt="<?= $dadosEmpresa['Fantasia'] ?>" />
-							</a>
-							-->
-							<?php
-								foreach ((array) $footerData as $aboutFt) {
-							 		if($aboutFt['Descricao'] == 'Acesso Rápido') {
-								 		foreach ((array) $aboutFt['Itens'] as $aboutItem) {
-											if($aboutItem['Descricao'] == 'acessorapido') {
-							?>
-								<p><?= $aboutItem['Html'] ?></p>
-							<?php
-											}
-										}
-									}
-								}
-							?>
-						</div>
-						<div class="logo-ft">
-							<!-- retira logo footer
-							<a href="/" title="<?= $dadosEmpresa['Fantasia'] ?>">
-								<img src="/images/site/logo-w.png" alt="<?= $dadosEmpresa['Fantasia'] ?>" />
-							</a>
-							-->
 							<?php
 								foreach ((array) $footerData as $aboutFt) {
 							 		if($aboutFt['Descricao'] == 'Precisa de Ajuda') {
@@ -599,29 +534,60 @@
 							?>
 						</div>
 					</div>
-					<div class="ft-col customer-ft col-xs-12">
-						<h2>SAC</h2>
-						<nav class="info-ft">
-							<div class="box-icon phone">
-								<div class="icon"><img src="/images/site/icones/elements/icon-phone.png" alt="Telefone"></div>
-								<div class="icon-text">
-									<a href="tel:+55<?= mascara(substr($dadosEmpresa['DDDTelefone'],-2) . $dadosEmpresa['Telefone'], "(##) ####-####") ?>" class="drop-content"><?= mascara(substr($dadosEmpresa['DDDTelefone'],-2) . $dadosEmpresa['Telefone'], "(##) ####-####") ?></a>
-									<br><span>Horário de Atendimento<br>
-									De segunda a sexta, das 10:00 as 17:00</span>
-								</div>
-							</div>
-							<div class="box-icon mail">
-								<div class="icon"><img src="/images/site/icones/elements/icon-mail.png" alt="E-mail"></div>
-								<div class="icon-text"><a href="mailto:<?= $dadosEmpresa['Email'] ?>"><?= $dadosEmpresa['Email'] ?></a></div>
-							</div>
-							<div class="box-icon address">
-								<div class="icon"><img src="/images/site/icones/elements/icon-address.png" alt="Endereço"></div>
-								<div class="icon-text"><span><?= $endCadastral['Enderecos'][0]['Logradouro'] . ", " . $endCadastral['Enderecos'][0]['Numero'] 
-				. " - " . $endCadastral['Enderecos'][0]['Cidade']['Nome'] . " - " . $endCadastral['Enderecos'][0]['Cidade']['Estado']['Sigla'] . " | CEP: " . mascara($endCadastral['Enderecos'][0]['CEP'], "#####-###") ?></span></div>
-							</div>
-						</nav>
+					<div class="ft-col col-xs-3">
+						<div class="logo-ft">
+								<?php
+									foreach ((array) $footerData as $aboutFt) {
+										if($aboutFt['Descricao'] == 'Acesso Rápido') {
+											foreach ((array) $aboutFt['Itens'] as $aboutItem) {
+												if($aboutItem['Descricao'] == 'acessorapido') {
+								?>
+									<p><?= $aboutItem['Html'] ?></p>
+								<?php
+												}
+											}
+										}
+									}
+								?>
+						</div>
 					</div>
+					<div class="ft-col col-xs-3">
+						<div class="logo-ft">
+								<?php
+									foreach ((array) $footerData as $aboutFt) {
+										if($aboutFt['Descricao'] == 'Produtos') {
+											foreach ((array) $aboutFt['Itens'] as $aboutItem) {
+												if($aboutItem['Descricao'] == 'produtos') {
+								?>
+									<p><?= $aboutItem['Html'] ?></p>
+								<?php
+												}
+											}
+										}
+									}
+								?>
+							</div>
+					</div>
+					<div class="ft-col col-xs-3">
+						<div class="logo-ft">
+							<?php
+								foreach ((array) $footerData as $aboutFt) {
+							 		if($aboutFt['Descricao'] == 'Sobre') {
+								 		foreach ((array) $aboutFt['Itens'] as $aboutItem) {
+											if($aboutItem['Descricao'] == 'sobre') {
+							?>
+								<p><?= $aboutItem['Html'] ?></p>
+							<?php
+											}
+										}
+									}
+								}
+							?>
+						</div>
+					</div>
+					
 					<div class="ft-col col-xs-12">
+						<h5>Mídias Sociais</h5>
 						<nav class="midias-ft">
 							<?php
 								foreach ((array) $footerData as $socialFt) {
