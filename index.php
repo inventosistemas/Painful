@@ -264,6 +264,7 @@
 									<?php endforeach; ?>
 								</ul>
 								<div class="ue-floated-menu">
+									<!--	
 									<div class="drop-toggle">
 										<div class="icon">
 											<span class="i-bar"></span>
@@ -272,6 +273,7 @@
 										</div>
 										<span class="text">ver todas</span>
 									</div>
+									-->
 									<div class="drop-content">
 										<ul class="float-l1">
 											<?php
