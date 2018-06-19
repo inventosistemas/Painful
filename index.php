@@ -523,9 +523,9 @@
 						<div class="logo-ft">
 							<?php
 								foreach ((array) $footerData as $aboutFt) {
-							 		if($aboutFt['Descricao'] == 'Precisa de Ajuda') {
+							 		if($aboutFt['Descricao'] == 'Sobre') {
 								 		foreach ((array) $aboutFt['Itens'] as $aboutItem) {
-											if($aboutItem['Descricao'] == 'precisadeajuda') {
+											if($aboutItem['Descricao'] == 'sobre') {
 							?>
 								<p><?= $aboutItem['Html'] ?></p>
 							<?php
@@ -535,7 +535,24 @@
 								}
 							?>
 						</div>
-					</div>
+					</div>		
+					<div class="ft-col col-xs-3">
+						<div class="logo-ft">
+								<?php
+									foreach ((array) $footerData as $aboutFt) {
+										if($aboutFt['Descricao'] == 'Produtos') {
+											foreach ((array) $aboutFt['Itens'] as $aboutItem) {
+												if($aboutItem['Descricao'] == 'produtos') {
+								?>
+									<p><?= $aboutItem['Html'] ?></p>
+								<?php
+												}
+											}
+										}
+									}
+								?>
+							</div>
+					</div>			
 					<div class="ft-col col-xs-3">
 						<div class="logo-ft">
 								<?php
@@ -555,28 +572,11 @@
 					</div>
 					<div class="ft-col col-xs-3">
 						<div class="logo-ft">
-								<?php
-									foreach ((array) $footerData as $aboutFt) {
-										if($aboutFt['Descricao'] == 'Produtos') {
-											foreach ((array) $aboutFt['Itens'] as $aboutItem) {
-												if($aboutItem['Descricao'] == 'produtos') {
-								?>
-									<p><?= $aboutItem['Html'] ?></p>
-								<?php
-												}
-											}
-										}
-									}
-								?>
-							</div>
-					</div>
-					<div class="ft-col col-xs-3">
-						<div class="logo-ft">
 							<?php
 								foreach ((array) $footerData as $aboutFt) {
-							 		if($aboutFt['Descricao'] == 'Sobre') {
+							 		if($aboutFt['Descricao'] == 'Precisa de Ajuda') {
 								 		foreach ((array) $aboutFt['Itens'] as $aboutItem) {
-											if($aboutItem['Descricao'] == 'sobre') {
+											if($aboutItem['Descricao'] == 'precisadeajuda') {
 							?>
 								<p><?= $aboutItem['Html'] ?></p>
 							<?php
@@ -587,6 +587,9 @@
 							?>
 						</div>
 					</div>
+
+
+
 					
 					<div class="ft-col col-xs-12">
 						<h5>Mídias Sociais</h5>
