@@ -264,6 +264,7 @@
 									<?php endforeach; ?>
 								</ul>
 								<div class="ue-floated-menu">
+									<!--	
 									<div class="drop-toggle">
 										<div class="icon">
 											<span class="i-bar"></span>
@@ -272,6 +273,7 @@
 										</div>
 										<span class="text">ver todas</span>
 									</div>
+									-->
 									<div class="drop-content">
 										<ul class="float-l1">
 											<?php
@@ -521,9 +523,9 @@
 						<div class="logo-ft">
 							<?php
 								foreach ((array) $footerData as $aboutFt) {
-							 		if($aboutFt['Descricao'] == 'Precisa de Ajuda') {
+							 		if($aboutFt['Descricao'] == 'Sobre') {
 								 		foreach ((array) $aboutFt['Itens'] as $aboutItem) {
-											if($aboutItem['Descricao'] == 'precisadeajuda') {
+											if($aboutItem['Descricao'] == 'sobre') {
 							?>
 								<p><?= $aboutItem['Html'] ?></p>
 							<?php
@@ -533,7 +535,24 @@
 								}
 							?>
 						</div>
-					</div>
+					</div>		
+					<div class="ft-col col-xs-3">
+						<div class="logo-ft">
+								<?php
+									foreach ((array) $footerData as $aboutFt) {
+										if($aboutFt['Descricao'] == 'Produtos') {
+											foreach ((array) $aboutFt['Itens'] as $aboutItem) {
+												if($aboutItem['Descricao'] == 'produtos') {
+								?>
+									<p><?= $aboutItem['Html'] ?></p>
+								<?php
+												}
+											}
+										}
+									}
+								?>
+							</div>
+					</div>			
 					<div class="ft-col col-xs-3">
 						<div class="logo-ft">
 								<?php
@@ -553,28 +572,11 @@
 					</div>
 					<div class="ft-col col-xs-3">
 						<div class="logo-ft">
-								<?php
-									foreach ((array) $footerData as $aboutFt) {
-										if($aboutFt['Descricao'] == 'Produtos') {
-											foreach ((array) $aboutFt['Itens'] as $aboutItem) {
-												if($aboutItem['Descricao'] == 'produtos') {
-								?>
-									<p><?= $aboutItem['Html'] ?></p>
-								<?php
-												}
-											}
-										}
-									}
-								?>
-							</div>
-					</div>
-					<div class="ft-col col-xs-3">
-						<div class="logo-ft">
 							<?php
 								foreach ((array) $footerData as $aboutFt) {
-							 		if($aboutFt['Descricao'] == 'Sobre') {
+							 		if($aboutFt['Descricao'] == 'Precisa de Ajuda') {
 								 		foreach ((array) $aboutFt['Itens'] as $aboutItem) {
-											if($aboutItem['Descricao'] == 'sobre') {
+											if($aboutItem['Descricao'] == 'precisadeajuda') {
 							?>
 								<p><?= $aboutItem['Html'] ?></p>
 							<?php
@@ -585,6 +587,9 @@
 							?>
 						</div>
 					</div>
+
+
+
 					
 					<div class="ft-col col-xs-12">
 						<h5>Mídias Sociais</h5>
@@ -797,7 +802,7 @@
 	<script src="/javascripts/jquery-ui.min.js"></script>
 	<script src="/javascripts/slick.min.js"></script>
 	<script src="/javascripts/jquery.elevatezoom.js"></script>
-	<script src="/javascripts/instafeed.js"></script>
+	<!-- <script src="/javascripts/instafeed.js"></script> -->
 	<script src="/javascripts/uemenu-seriedesign.js"></script>
 	<script src="/javascripts/seriedesign.js"></script>
 
