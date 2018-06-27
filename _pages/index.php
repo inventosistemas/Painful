@@ -160,13 +160,13 @@
 				<div class="row">
 					<nav>
 						<div id="contact-link">
-							<a href="LINK PARA MEUS PEDIDOS">Meus Pedidos</a>
+							<a href="about:blank#modal-login">Meus Pedidos</a>
 						</div>
 						<div id="contact-link">
-							<a href="LINK PARA AJUDA">Ajuda</a>
+							<a href="http://pptattoo.com.br/ajuda">Ajuda</a>
 						</div>
 						<div id="contact-link">
-							<a href="LINK PARA CONTATO">Contato</a>
+							<a href="https://pptattoo.com.br/contato">Contato</a>
 						</div>
 					</nav>
 				</div>

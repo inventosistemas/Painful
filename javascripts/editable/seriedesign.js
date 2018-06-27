@@ -102,56 +102,56 @@
 		/*--------------------------------------------------------
 			INSTAFEED
 		--------------------------------------------------------*/
-		var feed = new Instafeed({
-			get: 'user',
-			limit: '12',
-			sortBy: 'most-recent',
-			tagName: 'instagram_list',
-			userId: 2182797290,
-			accessToken: '2182797290.39f32e2.3560d64a75544e9cbe5d5727fd9938a5',
-			resolution: 'low_resolution',
-			template: '<a href="{{link}}" target="_blank" title="{{caption}}" class="photo-i"><div class="inner" style="background-image:url({{image}});"><img src="{{image}}" alt="{{caption}}" /><div class="box-like"><div class="center"><span class="likes">{{likes}}</span><span class="comments">{{comments}}</span></div></div></div></a>',
-			after: setSlick,
-		});
+		// var feed = new Instafeed({
+		// 	get: 'user',
+		// 	limit: '12',
+		// 	sortBy: 'most-recent',
+		// 	tagName: 'instagram_list',
+		// 	userId: 2182797290,
+		// 	accessToken: '2182797290.39f32e2.3560d64a75544e9cbe5d5727fd9938a5',
+		// 	resolution: 'low_resolution',
+		// 	template: '<a href="{{link}}" target="_blank" title="{{caption}}" class="photo-i"><div class="inner" style="background-image:url({{image}});"><img src="{{image}}" alt="{{caption}}" /><div class="box-like"><div class="center"><span class="likes">{{likes}}</span><span class="comments">{{comments}}</span></div></div></div></a>',
+		// 	after: setSlick,
+		// });
 
-		function setSlick() {
-			$('#instafeed').slick({
-				dots: false,
-				infinite: true,
-				speed: 500,
-				slidesToShow: 6,
-				slidesToScroll: 6,
-				responsive: [
-					{
-						breakpoint: 1025,
-						settings: {
-							slidesToShow: 5,
-							slidesToScroll: 5
-						}
-					}, {
-						breakpoint: 768,
-						settings: {
-							slidesToShow: 4,
-							slidesToScroll: 4
-						}
-					}, {
-						breakpoint: 601,
-						settings: {
-							slidesToShow: 3,
-							slidesToScroll: 3
-						}
-					}, {
-						breakpoint: 521,
-						settings: {
-							slidesToShow: 2,
-							slidesToScroll: 2
-						}
-					}
-				]
-			});
-		}
+		// function setSlick() {
+		// 	$('#instafeed').slick({
+		// 		dots: false,
+		// 		infinite: true,
+		// 		speed: 500,
+		// 		slidesToShow: 6,
+		// 		slidesToScroll: 6,
+		// 		responsive: [
+		// 			{
+		// 				breakpoint: 1025,
+		// 				settings: {
+		// 					slidesToShow: 5,
+		// 					slidesToScroll: 5
+		// 				}
+		// 			}, {
+		// 				breakpoint: 768,
+		// 				settings: {
+		// 					slidesToShow: 4,
+		// 					slidesToScroll: 4
+		// 				}
+		// 			}, {
+		// 				breakpoint: 601,
+		// 				settings: {
+		// 					slidesToShow: 3,
+		// 					slidesToScroll: 3
+		// 				}
+		// 			}, {
+		// 				breakpoint: 521,
+		// 				settings: {
+		// 					slidesToShow: 2,
+		// 					slidesToScroll: 2
+		// 				}
+		// 			}
+		// 		]
+		// 	});
+		// }
 
-		feed.run();
+		// feed.run();
 
 		/*--------------------------------------------------------
 			UI
