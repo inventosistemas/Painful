@@ -178,14 +178,24 @@
 				<div class="row">
 					<nav>
 						<div id="contact-link">
-							<a href="LINK PARA CONTATO">Contato</a>
+						<?php if (!empty($dadosLogin['ID']) && $dadosLogin['ID'] > 0) :
+									$nomeUsuario = explode(" ", $dadosLogin['Parceiro']['RazaoSocial']);
+							?>
+								<a href="/minhaconta"><span class="icon glyphicon glyphicon-user"></span><span class="hidden-xs hidden-sm">Olá <?= $nomeUsuario[0] ?></span></a> 
+							<?php else : ?>    
+								<a href="#modal-login" data-toggle="modal" id="link-login"><span class="icon glyphicon glyphicon-user"></span><span class="hidden-xs hidden-sm">Login</span></a>
+						<?php endif; ?>	
+						</div>	
+						<!-- <div id="contact-link">
+							<a href="about:blank#modal-login">Meus Pedidos</a>
+						</div> -->
+						<div id="contact-link">
+							<a href="http://pptattoo.com.br/ajuda">Ajuda</a>
 						</div>
 						<div id="contact-link">
-							<a href="LINK PARA AJUDA">Ajuda</a>
+							<a href="https://pptattoo.com.br/contato">Contato</a>
 						</div>
-						<div id="contact-link">
-							<a href="LINK PARA MEUS PEDIDOS">Meus Pedidos</a>
-						</div>
+				
 					</nav>
 				</div>
 			</div>
@@ -619,7 +629,7 @@
 		<!-- Copyright -->
 		<div id="copyright">
 			<div class="container">
-				<div class="copy-col col-xs-12 col-sm-7 col-md-8">
+				<div class="copy-col col-xs-12 col-sm-7 col-md-7">
 					<h2>Formas de pagamento</h2>
 					<nav class="nav-pay">
 						<?php

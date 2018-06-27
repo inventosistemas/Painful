@@ -42,7 +42,7 @@
 	</section>
 
 	<!-- Content featured -->
-	<section class="content-featured content-slider">
+	<!-- <section class="content-featured content-slider">
 		<div class="container">
 			<div class="product-slider">
 				<?php
@@ -102,7 +102,7 @@
 				<?php endif; endforeach; ?>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<!-- Showcase home -->
 	<section class="showcase-home">
