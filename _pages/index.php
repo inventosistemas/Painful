@@ -613,12 +613,12 @@
 	<footer id="footer">
 
 		<!-- Instagram -->
-		<div class="content-instagram">
+		<!-- <div class="content-instagram">
 			<div class="container">
 				<h2 class="title"><img src="images/site/icones/midias/icon-ig.png" alt="Instagram"><span>/painfulpleasuresbr</span></h2>
 				<div id="instafeed"></div>
 			</div>
-		</div>
+		</div> -->
 
 		<!-- Footer -->
 		<div class="footer">
@@ -889,7 +889,7 @@
 	<script src="/javascripts/jquery-ui.min.js"></script>
 	<script src="/javascripts/slick.min.js"></script>
 	<script src="/javascripts/jquery.elevatezoom.js"></script>
-	<script src="/javascripts/instafeed.js"></script>
+	<!-- <script src="/javascripts/instafeed.js"></script> -->
 	<script src="/javascripts/uemenu-seriedesign.js"></script>
 	<script src="/javascripts/seriedesign.js"></script>
 
