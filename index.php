@@ -786,7 +786,7 @@
 	<script src="/javascripts/jquery-ui.min.js"></script>
 	<script src="/javascripts/slick.min.js"></script>
 	<script src="/javascripts/jquery.elevatezoom.js"></script>
-	<!-- <script src="/javascripts/instafeed.js"></script> -->
+	<script src="/javascripts/instafeed.js"></script>
 	<script src="/javascripts/uemenu-seriedesign.js"></script>
 	<script src="/javascripts/seriedesign.js"></script>
 
