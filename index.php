@@ -69,15 +69,6 @@
 	<link href="/stylesheets/slick.css" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/personalized.css" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/lenord.css" rel="stylesheet" type="text/css">
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-73086747-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-
-		  gtag('config', 'UA-73086747-1');
-		</script>
 
 	<!-- Load jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -151,16 +142,6 @@
 				});
 		}
 	</script>
-		<!--Start of Zendesk Chat Script-->
-						<!--<script type="text/javascript">
-						window.$zopim||(function(d,s){var z=$zopim=function(c){
-						z._.push(c)},$=z.s=
-						d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-						_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
-						$.src='https://v2.zopim.com/?5QhRFHYYAzDd0mPhfxD7QC94GjTeywpL';z.t=+new Date;$.
-						type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
-						</script>-->
-		<!--End of Zendesk Chat Script-->
 </head>
 <body>
 
@@ -186,9 +167,6 @@
 								<a href="#modal-login" data-toggle="modal" id="link-login"><span class="icon glyphicon glyphicon-user"></span><span class="hidden-xs hidden-sm">Login</span></a>
 						<?php endif; ?>	
 						</div>	
-						<!-- <div id="contact-link">
-							<a href="about:blank#modal-login">Meus Pedidos</a>
-						</div> -->
 						<div id="contact-link">
 							<a href="http://pptattoo.com.br/ajuda">Ajuda</a>
 						</div>
