@@ -69,15 +69,6 @@
 	<link href="/stylesheets/slick.css" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/personalized.css" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/lenord.css" rel="stylesheet" type="text/css">
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-73086747-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-
-		  gtag('config', 'UA-73086747-1');
-		</script>
 
 	<!-- Load jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -151,16 +142,6 @@
 				});
 		}
 	</script>
-		<!--Start of Zendesk Chat Script-->
-						<!--<script type="text/javascript">
-						window.$zopim||(function(d,s){var z=$zopim=function(c){
-						z._.push(c)},$=z.s=
-						d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-						_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
-						$.src='https://v2.zopim.com/?5QhRFHYYAzDd0mPhfxD7QC94GjTeywpL';z.t=+new Date;$.
-						type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
-						</script>-->
-		<!--End of Zendesk Chat Script-->
 </head>
 <body>
 
@@ -178,14 +159,21 @@
 				<div class="row">
 					<nav>
 						<div id="contact-link">
-							<a href="LINK PARA CONTATO">Contato</a>
+						<?php if (!empty($dadosLogin['ID']) && $dadosLogin['ID'] > 0) :
+									$nomeUsuario = explode(" ", $dadosLogin['Parceiro']['RazaoSocial']);
+							?>
+								<a href="/minhaconta"><span class="icon glyphicon glyphicon-user"></span><span class="hidden-xs hidden-sm">Olá <?= $nomeUsuario[0] ?></span></a> 
+							<?php else : ?>    
+								<a href="#modal-login" data-toggle="modal" id="link-login"><span class="icon glyphicon glyphicon-user"></span><span class="hidden-xs hidden-sm">Login</span></a>
+						<?php endif; ?>	
+						</div>	
+						<div id="contact-link">
+							<a href="http://pptattoo.com.br/ajuda">Ajuda</a>
 						</div>
 						<div id="contact-link">
-							<a href="LINK PARA AJUDA">Ajuda</a>
+							<a href="https://pptattoo.com.br/contato">Contato</a>
 						</div>
-						<div id="contact-link">
-							<a href="LINK PARA MEUS PEDIDOS">Meus Pedidos</a>
-						</div>
+				
 					</nav>
 				</div>
 			</div>
@@ -200,23 +188,7 @@
 							<img src="/images/site/logo.png" alt="<?= $dadosEmpresa['Fantasia'] ?>" />
 						</a>
 					</div>
-					<div class="box-search">
-							<form name="termobusca" method="get" action="/busca">
-								<!-- <span class="btn-search" onclick="document.buscaresponsiva.submit();"></span> -->
-								<span class="btn-search" onclick="document.termobusca.submit();"></span>
-								<input class="textbox" type="text" name="termobusca" placeholder="O que você procura?" required="required" />
-							</form>
-						</div>
-					<div class="header-rt">
-						<?php if (!in_array($paginas[1], ['carrinho', 'checkout'])) : ?>
-								<div class="box-cart">
-									<a href="#modal-cart" data-toggle="modal"><span class="cart-qtd"></span></a>
-								</div>
-						<?php endif; ?>
-					</div>
-				</div>
-				<div class="inner-header">
-				<nav class="main-navigation">
+					<nav class="main-navigation">
 						<a class="menu-mb title-nav">
 							<div class="icon">
 								<span class="i-bar"></span>
@@ -264,16 +236,6 @@
 									<?php endforeach; ?>
 								</ul>
 								<div class="ue-floated-menu">
-									<!--	
-									<div class="drop-toggle">
-										<div class="icon">
-											<span class="i-bar"></span>
-											<span class="i-bar"></span>
-											<span class="i-bar"></span>
-										</div>
-										<span class="text">ver todas</span>
-									</div>
-									-->
 									<div class="drop-content">
 										<ul class="float-l1">
 											<?php
@@ -312,6 +274,20 @@
 							</div>
 						</div>
 					</nav>
+					<div class="header-rt">
+						<?php if (!in_array($paginas[1], ['carrinho', 'checkout'])) : ?>
+								<div class="box-cart">
+									<a href="#modal-cart" data-toggle="modal"><span class="cart-qtd"></span></a>
+								</div>
+						<?php endif; ?>
+						<div class="box-search">
+							<form name="termobusca" method="get" action="/busca">
+								<!-- <span class="btn-search" onclick="document.buscaresponsiva.submit();"></span> -->
+								<span class="btn-search" onclick="document.termobusca.submit();"></span>
+								<input class="textbox" type="text" name="termobusca" placeholder="O que você procura?" required="required" />
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -619,7 +595,7 @@
 		<!-- Copyright -->
 		<div id="copyright">
 			<div class="container">
-				<div class="copy-col col-xs-12 col-sm-7 col-md-8">
+				<div class="copy-col col-xs-12 col-sm-7 col-md-7">
 					<h2>Formas de pagamento</h2>
 					<nav class="nav-pay">
 						<?php
@@ -802,7 +778,7 @@
 	<script src="/javascripts/jquery-ui.min.js"></script>
 	<script src="/javascripts/slick.min.js"></script>
 	<script src="/javascripts/jquery.elevatezoom.js"></script>
-	<!-- <script src="/javascripts/instafeed.js"></script> -->
+	<script src="/javascripts/instafeed.js"></script>
 	<script src="/javascripts/uemenu-seriedesign.js"></script>
 	<script src="/javascripts/seriedesign.js"></script>
 

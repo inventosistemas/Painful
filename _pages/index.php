@@ -160,13 +160,13 @@
 				<div class="row">
 					<nav>
 						<div id="contact-link">
-							<a href="LINK PARA MEUS PEDIDOS">Meus Pedidos</a>
+							<a href="about:blank#modal-login">Meus Pedidos</a>
 						</div>
 						<div id="contact-link">
-							<a href="LINK PARA AJUDA">Ajuda</a>
+							<a href="http://pptattoo.com.br/ajuda">Ajuda</a>
 						</div>
 						<div id="contact-link">
-							<a href="LINK PARA CONTATO">Contato</a>
+							<a href="https://pptattoo.com.br/contato">Contato</a>
 						</div>
 					</nav>
 				</div>
@@ -613,12 +613,12 @@
 	<footer id="footer">
 
 		<!-- Instagram -->
-		<div class="content-instagram">
+		<!-- <div class="content-instagram">
 			<div class="container">
 				<h2 class="title"><img src="images/site/icones/midias/icon-ig.png" alt="Instagram"><span>/painfulpleasuresbr</span></h2>
 				<div id="instafeed"></div>
 			</div>
-		</div>
+		</div> -->
 
 		<!-- Footer -->
 		<div class="footer">
@@ -889,7 +889,7 @@
 	<script src="/javascripts/jquery-ui.min.js"></script>
 	<script src="/javascripts/slick.min.js"></script>
 	<script src="/javascripts/jquery.elevatezoom.js"></script>
-	<script src="/javascripts/instafeed.js"></script>
+	<!-- <script src="/javascripts/instafeed.js"></script> -->
 	<script src="/javascripts/uemenu-seriedesign.js"></script>
 	<script src="/javascripts/seriedesign.js"></script>
 
