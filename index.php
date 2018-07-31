@@ -55,7 +55,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name ="description" content="">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>Painful Pleausres Brasil</title>
+	<title>Painful Pleasures Brasil</title>
 	<link rel="shortcut icon" href="images/favicon/favicon.ico">
 	<!--<link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
@@ -215,7 +215,7 @@
 												<ul class="drop-content menu-l2">
 											<?php endif; ?>
 											<?php foreach ((array) $secao['Categorias'] as $categoria) : ?>
-												<li>
+												<li style="border-bottom: 0.5px solid #666;">
 													<a href="/categoria?id=<?= $categoria['ID'] ?>"><?= htmlentities($categoria['Descricao']) ?></a>
 													<?php if($categoria['Categorias']) : ?>
 														<span class="drop-toggle nav-plus"></span>
@@ -250,13 +250,13 @@
 														<ul class="float-l2">
 													<?php endif; ?>
 													<?php foreach ((array) $secao['Categorias'] as $categoria) : ?>
-														<li>
+														<li style="border-bottom: 0.5px solid #666">
 															<a href="/categoria?id=<?= $categoria['ID'] ?>"><?= htmlentities($categoria['Descricao']) ?></a>
 															<?php if($categoria['Categorias']) : ?>
 																<ul class="float-l3">
 															<?php endif; ?>
 															<?php foreach ((array) $categoria['Categorias'] as $subcategoria) : ?>
-																	<li><a href="/categoria?id=<?= $subcategoria['ID'] ?>"><?= htmlentities($subcategoria['Descricao']) ?></a></li>
+																	<li style="border-bottom: 0.5px solid #666"><a href="/categoria?id=<?= $subcategoria['ID'] ?>"><?= htmlentities($subcategoria['Descricao']) ?></a></li>
 															<?php endforeach; ?>
 															<?php if($categoria['Categorias']) : ?>
 																</ul>
@@ -614,7 +614,7 @@
 				<div class="copy-col col-xs-12 col-sm-5 col-md-4 box-designed">
 					<div class="item">
 						<h2>Tecnologia</h2>
-						<a href="http://www.inventosistemas.com.br/" target="_blank">
+						<a href="#" target="_blank">
 							<img src="/images/site/logo-invento.png" alt="Invento">
 						</a>
 					</div>

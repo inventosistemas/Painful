@@ -255,7 +255,7 @@
 														<ul class="drop-content menu-l3">
 													<?php endif; ?>
 													<?php foreach ((array) $categoria['Categorias'] as $subcategoria) : ?>
-															<li><a href="/categoria?id=<?= $subcategoria['ID'] ?>"><?= htmlentities($subcategoria['Descricao']) ?></a></li>
+															<li style="border-bottom: 0.5px solid #666"><a href="/categoria?id=<?= $subcategoria['ID'] ?>"><?= htmlentities($subcategoria['Descricao']) ?></a></li>
 													<?php endforeach; ?>
 													<?php if($categoria['Categorias']) : ?>
 														</ul>
@@ -297,7 +297,7 @@
 																<ul class="float-l3">
 															<?php endif; ?>
 															<?php foreach ((array) $categoria['Categorias'] as $subcategoria) : ?>
-																	<li><a href="/categoria?id=<?= $subcategoria['ID'] ?>"><?= htmlentities($subcategoria['Descricao']) ?></a></li>
+																	<li style="border-bottom: 0.5px solid #666"><a href="/categoria?id=<?= $subcategoria['ID'] ?>"><?= htmlentities($subcategoria['Descricao']) ?></a></li>
 															<?php endforeach; ?>
 															<?php if($categoria['Categorias']) : ?>
 																</ul>
