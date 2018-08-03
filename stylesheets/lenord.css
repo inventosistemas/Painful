@@ -35,3 +35,7 @@
     margin: 0px;
     position: relative;
 }
+
+.footer-links{
+    list-style-type: none;
+}

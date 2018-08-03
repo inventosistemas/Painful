@@ -192,7 +192,7 @@ input[type="text"],input[type="email"],input[type="password"],button,textarea,.f
 }
 
 .footer a:hover{
-    color:#ffffff;
+    /* color:#ffffff; */
 }
 
 .footer .inner-ft{display:inline-block;vertical-align:top;width:100%}.footer .inner-ft>div:nth-child(3),.footer .inner-ft>div:nth-child(4){padding-right:0}@media screen and (min-width: 992px){
