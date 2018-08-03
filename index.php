@@ -580,7 +580,7 @@
 												$facebook = $socialItem['Descricao'];
 											}
 							?>
-								<a href="<?= $socialItem['Descricao'] ?>">
+								<a href="<?= $socialItem['Descricao'] ?>" style="color:#22428e;" >
 									<img src="<?= $socialItem['Html'] ?>">
 								</a>
 							<?php
