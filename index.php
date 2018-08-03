@@ -286,7 +286,7 @@
 							<form name="termobusca" method="get" action="/busca">
 								<!-- <span class="btn-search" onclick="document.buscaresponsiva.submit();"></span> -->
 								<span class="btn-search" onclick="document.termobusca.submit();"></span>
-								<input class="textbox" type="text" name="termobusca" placeholder="O que você procura?" required="required" style="background: url(/images/site/icones/elements/icon-search.png) no-repeat; background-position: 95% 10px; background-size:7%;"/>
+								<input class="textbox" type="text" name="termobusca" placeholder="O que você procura?" required="required" style="background: url(/images/site/icones/elements/icon-search.png) no-repeat; background-position: 95% 14px; background-size:5%;"/>
 							</form>
 						</div>
 					</div>
