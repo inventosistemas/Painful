@@ -158,6 +158,12 @@
 			<div class="container">
 				<div class="row">
 					<nav>
+					<div id="contact-link">
+							<a href="https://pptattoo.com.br/contato">Contato</a>
+						</div>'
+					<div id="contact-link">
+							<a href="http://pptattoo.com.br/ajuda">Ajuda</a>
+						</div>
 						<div id="contact-link">
 						<?php if (!empty($dadosLogin['ID']) && $dadosLogin['ID'] > 0) :
 									$nomeUsuario = explode(" ", $dadosLogin['Parceiro']['RazaoSocial']);
@@ -167,12 +173,8 @@
 								<a href="#modal-login" data-toggle="modal" id="link-login"><span class="icon glyphicon glyphicon-user"></span><span class="hidden-xs hidden-sm">Login</span></a>
 						<?php endif; ?>	
 						</div>	
-						<div id="contact-link">
-							<a href="http://pptattoo.com.br/ajuda">Ajuda</a>
-						</div>
-						<div id="contact-link">
-							<a href="https://pptattoo.com.br/contato">Contato</a>
-						</div>
+
+
 				
 					</nav>
 				</div>
