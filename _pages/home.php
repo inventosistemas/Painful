@@ -107,6 +107,14 @@
 	<!-- Showcase home -->
 	<section class="showcase-home">
 		<div class="container">
+		  <div class="block" style="
+			color: #fff;
+			background-size: 100% 1005;
+			background-color: #22428e;  
+			margin-bottom:30px;">
+			<h2 class="title_block" style="font-weight:500">Produtos em Destaque</h2>
+		  </div>	
+
 			<?php foreach ((array) $showcaseData as $prodShowcase) : 
 				$idProd = $prodShowcase['Produto']['ID'];
 				$imgProd = $prodShowcase['Produto']['Imagem'];
