@@ -304,7 +304,7 @@
 								<span class="i-bar"></span>
 								<span class="i-bar"></span>
 							</div>
-							<span class="text">Menu</span>
+							<span class="text">Menu +</span>
 						</a>
 						<div class="menu-mb-content box-nav">
 							<span class="close-menu"></span>
@@ -325,7 +325,7 @@
 											<?php endif; ?>
 											<?php foreach ((array) $secao['Categorias'] as $categoria) : ?>
 												<li style="border-bottom: 0.5px solid #666;">
-													<a href="/categoria?id=<?= $categoria['ID'] ?>"  style="color:#000;"><?= htmlentities($categoria['Descricao']) ?></a>
+													<a href="/categoria?id=<?= $categoria['ID'] ?>" ><?= htmlentities($categoria['Descricao']) ?></a>
 													<?php if($categoria['Categorias']) : ?>
 														<span class="drop-toggle nav-plus"></span>
 														<ul class="drop-content menu-l3">
@@ -360,12 +360,12 @@
 													<?php endif; ?>
 													<?php foreach ((array) $secao['Categorias'] as $categoria) : ?>
 														<li style="border-bottom: 0.5px solid #666">
-															<a href="/categoria?id=<?= $categoria['ID'] ?>" style="color:#000;"><?= htmlentities($categoria['Descricao']) ?></a>
+															<a href="/categoria?id=<?= $categoria['ID'] ?>" ><?= htmlentities($categoria['Descricao']) ?></a>
 															<?php if($categoria['Categorias']) : ?>
 																<ul class="float-l3">
 															<?php endif; ?>
 															<?php foreach ((array) $categoria['Categorias'] as $subcategoria) : ?>
-																	<li style="border-bottom: 0.5px solid #666"><a href="/categoria?id=<?= $subcategoria['ID'] ?>"  style="color:#000;"><?= htmlentities($subcategoria['Descricao']) ?></a></li>
+																	<li style="border-bottom: 0.5px solid #666"><a href="/categoria?id=<?= $subcategoria['ID'] ?>"  ><?= htmlentities($subcategoria['Descricao']) ?></a></li>
 															<?php endforeach; ?>
 															<?php if($categoria['Categorias']) : ?>
 																</ul>
