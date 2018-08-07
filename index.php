@@ -190,7 +190,7 @@
 							<img src="/images/site/logo.png" alt="<?= $dadosEmpresa['Fantasia'] ?>" />
 						</a>
 					</div>
-					<nav class="main-navigation">
+					<!-- <nav class="main-navigation">
 						<a class="menu-mb title-nav">
 							<div class="icon">
 								<span class="i-bar"></span>
@@ -275,7 +275,7 @@
 								</div>
 							</div>
 						</div>
-					</nav>
+					</nav> -->
 					<div class="header-rt">
 						<?php if (!in_array($paginas[1], ['carrinho', 'checkout'])) : ?>
 								<div class="box-cart">
@@ -291,7 +291,100 @@
 						</div>
 					</div>
 				</div>
+
+
+
 			</div>
+
+
+					<nav class="main-navigation">
+						<a class="menu-mb title-nav">
+							<div class="icon">
+								<span class="i-bar"></span>
+								<span class="i-bar"></span>
+								<span class="i-bar"></span>
+							</div>
+							<span class="text">Menu</span>
+						</a>
+						<div class="menu-mb-content box-nav">
+							<span class="close-menu"></span>
+							<div class="ue-menu">
+								<ul class="menu-l1 ue-options-menu">
+									<?php
+										$menuSite = getRest($endPoint['menu']);
+										foreach ((array) $menuSite as $secao) :
+									?>
+										<li class="ue-list-option">
+											<a href="/secao?id=<?= $secao['SecaoID'] ?>">
+												<span class="icon"><img src="<?= htmlentities($secao['Imagem']) ?>"></span>
+												<span class="text"><?= htmlentities($secao['Descricao']) ?></span>
+											</a>
+											<?php if($secao['Categorias']) : ?>
+												<span class="drop-toggle nav-plus"></span>
+												<ul class="drop-content menu-l2">
+											<?php endif; ?>
+											<?php foreach ((array) $secao['Categorias'] as $categoria) : ?>
+												<li style="border-bottom: 0.5px solid #666;">
+													<a href="/categoria?id=<?= $categoria['ID'] ?>"  style="color:#000;"><?= htmlentities($categoria['Descricao']) ?></a>
+													<?php if($categoria['Categorias']) : ?>
+														<span class="drop-toggle nav-plus"></span>
+														<ul class="drop-content menu-l3">
+													<?php endif; ?>
+													<?php foreach ((array) $categoria['Categorias'] as $subcategoria) : ?>
+															<li><a href="/categoria?id=<?= $subcategoria['ID'] ?>"><?= htmlentities($subcategoria['Descricao']) ?></a></li>
+													<?php endforeach; ?>
+													<?php if($categoria['Categorias']) : ?>
+														</ul>
+													<?php endif; ?>
+												</li>
+												<?php endforeach; ?>
+											<?php if($secao['Categorias']) : ?>
+												</ul>
+											<?php endif; ?>
+										</li>
+									<?php endforeach; ?>
+								</ul>
+								<div class="ue-floated-menu">
+									<div class="drop-content">
+										<ul class="float-l1">
+											<?php
+												$menuSite = getRest($endPoint['menu']);
+												foreach ((array) $menuSite as $secao) :
+											?>
+												<li class="ue-floated-option">
+													<a href="/secao?id=<?= $secao['SecaoID'] ?>">
+														<span><?= htmlentities($secao['Descricao']) ?></span>
+													</a>
+													<?php if($secao['Categorias']) : ?>
+														<ul class="float-l2">
+													<?php endif; ?>
+													<?php foreach ((array) $secao['Categorias'] as $categoria) : ?>
+														<li style="border-bottom: 0.5px solid #666">
+															<a href="/categoria?id=<?= $categoria['ID'] ?>" style="color:#000;"><?= htmlentities($categoria['Descricao']) ?></a>
+															<?php if($categoria['Categorias']) : ?>
+																<ul class="float-l3">
+															<?php endif; ?>
+															<?php foreach ((array) $categoria['Categorias'] as $subcategoria) : ?>
+																	<li style="border-bottom: 0.5px solid #666"><a href="/categoria?id=<?= $subcategoria['ID'] ?>"  style="color:#000;"><?= htmlentities($subcategoria['Descricao']) ?></a></li>
+															<?php endforeach; ?>
+															<?php if($categoria['Categorias']) : ?>
+																</ul>
+															<?php endif; ?>
+														</li>
+														<?php endforeach; ?>
+													<?php if($secao['Categorias']) : ?>
+														</ul>
+													<?php endif; ?>
+												</li>
+											<?php endforeach; ?>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</nav>
+
+
 		</div>
 	</header>
 
