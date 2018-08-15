@@ -70,6 +70,10 @@
 	<link href="/stylesheets/personalized.css" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/lenord.css" rel="stylesheet" type="text/css">
 
+	<!-- newsletter -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<!-- newsletter -->
+
 	<!-- Load jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
@@ -590,7 +594,7 @@
 		<div class="footer">
 			<div class="container">
 				<div class="inner-ft">
-					<div class="ft-col col-xs-3">
+					<div class="ft-col col-xs-2">
 						<div class="logo-ft">
 							<?php
 								foreach ((array) $footerData as $aboutFt) {
@@ -607,7 +611,7 @@
 							?>
 						</div>
 					</div>		
-					<div class="ft-col col-xs-3">
+					<div class="ft-col col-xs-2">
 						<div class="logo-ft">
 								<?php
 									foreach ((array) $footerData as $aboutFt) {
@@ -624,7 +628,7 @@
 								?>
 							</div>
 					</div>			
-					<div class="ft-col col-xs-3">
+					<div class="ft-col col-xs-2">
 						<div class="logo-ft">
 								<?php
 									foreach ((array) $footerData as $aboutFt) {
@@ -641,7 +645,7 @@
 								?>
 						</div>
 					</div>
-					<div class="ft-col col-xs-3">
+					<div class="ft-col col-xs-2">
 						<div class="logo-ft">
 							<?php
 								foreach ((array) $footerData as $aboutFt) {
@@ -657,6 +661,20 @@
 								}
 							?>
 						</div>
+					</div>
+					<div class="ft-col col-xs-4">
+						<div class="logo-ft">
+							<p></p>
+							<center>
+								<h4>FIQUE POR DENTRO!</h4>
+								Novidades, Lançamentos e Promoções
+								<p></p>
+								<form  class="index-search-form">
+									<input name="search" type="text" class="search-box" placeholder="&#xf002;  Seu E-mail">
+  									<button name="submit" class="" type="submit">Quero fazer parte</button>
+								</form>
+							</center>
+						</div>	
 					</div>
 
 

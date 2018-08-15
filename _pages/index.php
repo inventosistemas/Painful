@@ -686,7 +686,7 @@
 							?>
 						</nav>
 					</div>
-					<div class="ft-col col-xs-12">
+					<div class="ft-col col-xs-9">
 						<div class="box-facebook">
 							<div id="fb-root"></div>
 							<script>(function(d, s, id) {
@@ -699,6 +699,7 @@
 							<div class="fb-page" data-href="<?= $facebook; ?>" data-tabs="timeline" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="<?= $facebook; ?>" class="fb-xfbml-parse-ignore"><a href="<?= $facebook; ?>"><?= $dadosEmpresa['Fantasia'] ?></a></blockquote></div>
 						</div>
 					</div>
+
 				</div>
 			</div>
 		</div>
