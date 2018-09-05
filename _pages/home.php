@@ -34,7 +34,7 @@
 		?>
 			<a href="<?= $banner['HotSite'] ?>" class="banner-link">
 				<div class="box-inner">
-					<img src="<?= $banner['Imagem'] ?>" alt="<?= $banner['Descricao'] ?>" title="<?= $banner['Titulo'] ?>" class="img-dsk">
+					<img src="<?= $banner['Imagem'] ?>" alt="<?= $banner['Descricao'] ?>" title="<?= $banner['Titulo'] ?>" class="img-dsk" style="height:300px;">
 					<img src="<?= $banner['ImagemMobile'] ?>" alt="<?= $banner['Descricao'] ?>" title="<?= $banner['Titulo'] ?>" class="img-mb">
 				</div>
 			</a>
