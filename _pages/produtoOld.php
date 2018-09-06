@@ -126,7 +126,7 @@
 			</div>
 			<div class="box-share">
 				<span class="title">Compartilhar</span>
-				<a href="javascript: void(0);" onclick="window.open('https://twitter.com/intent/tweet?text=Gostei+de+um+produto+da+Hooray&url=<?= urlencode(URLSite . ltrim($URISite,"/")) ?>&hashtags=hooraybrasil','twitter', 'toolbar=0, status=0, width=650, height=450');"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+				<a href="javascript: void(0);" onclick="window.open('https://twitter.com/intent/tweet?text=Gostei+de+um+produto+da+Painful&url=<?= urlencode(URLSite . ltrim($URISite,"/")) ?>&hashtags=hooraybrasil','twitter', 'toolbar=0, status=0, width=650, height=450');"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
 				<a href="javascript: void(0);" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?= urlencode(URLSite . ltrim($URISite,"/")) ?>','facebook', 'toolbar=0, status=0, width=650, height=450');"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
 			</div>
 		</div>

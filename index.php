@@ -55,7 +55,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name ="description" content="">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>Painful Pleausres Brasil</title>
+	<title>Painful Pleasures Brasil</title>
 	<link rel="shortcut icon" href="images/favicon/favicon.ico">
 	<!--<link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
@@ -69,6 +69,10 @@
 	<link href="/stylesheets/slick.css" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/personalized.css" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/lenord.css" rel="stylesheet" type="text/css">
+
+	<!-- newsletter -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<!-- newsletter -->
 
 	<!-- Load jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -158,6 +162,12 @@
 			<div class="container">
 				<div class="row">
 					<nav>
+					<div id="contact-link">
+							<a href="https://pptattoo.com.br/contato">Contato</a>
+						</div>'
+					<div id="contact-link">
+							<a href="http://pptattoo.com.br/ajuda">Ajuda</a>
+						</div>
 						<div id="contact-link">
 						<?php if (!empty($dadosLogin['ID']) && $dadosLogin['ID'] > 0) :
 									$nomeUsuario = explode(" ", $dadosLogin['Parceiro']['RazaoSocial']);
@@ -167,12 +177,8 @@
 								<a href="#modal-login" data-toggle="modal" id="link-login"><span class="icon glyphicon glyphicon-user"></span><span class="hidden-xs hidden-sm">Login</span></a>
 						<?php endif; ?>	
 						</div>	
-						<div id="contact-link">
-							<a href="http://pptattoo.com.br/ajuda">Ajuda</a>
-						</div>
-						<div id="contact-link">
-							<a href="https://pptattoo.com.br/contato">Contato</a>
-						</div>
+
+
 				
 					</nav>
 				</div>
@@ -188,7 +194,7 @@
 							<img src="/images/site/logo.png" alt="<?= $dadosEmpresa['Fantasia'] ?>" />
 						</a>
 					</div>
-					<nav class="main-navigation">
+					<!-- <nav class="main-navigation">
 						<a class="menu-mb title-nav">
 							<div class="icon">
 								<span class="i-bar"></span>
@@ -215,7 +221,7 @@
 												<ul class="drop-content menu-l2">
 											<?php endif; ?>
 											<?php foreach ((array) $secao['Categorias'] as $categoria) : ?>
-												<li>
+												<li style="border-bottom: 0.5px solid #666;">
 													<a href="/categoria?id=<?= $categoria['ID'] ?>"><?= htmlentities($categoria['Descricao']) ?></a>
 													<?php if($categoria['Categorias']) : ?>
 														<span class="drop-toggle nav-plus"></span>
@@ -250,13 +256,120 @@
 														<ul class="float-l2">
 													<?php endif; ?>
 													<?php foreach ((array) $secao['Categorias'] as $categoria) : ?>
-														<li>
+														<li style="border-bottom: 0.5px solid #666">
 															<a href="/categoria?id=<?= $categoria['ID'] ?>"><?= htmlentities($categoria['Descricao']) ?></a>
 															<?php if($categoria['Categorias']) : ?>
 																<ul class="float-l3">
 															<?php endif; ?>
 															<?php foreach ((array) $categoria['Categorias'] as $subcategoria) : ?>
-																	<li><a href="/categoria?id=<?= $subcategoria['ID'] ?>"><?= htmlentities($subcategoria['Descricao']) ?></a></li>
+																	<li style="border-bottom: 0.5px solid #666"><a href="/categoria?id=<?= $subcategoria['ID'] ?>"><?= htmlentities($subcategoria['Descricao']) ?></a></li>
+															<?php endforeach; ?>
+															<?php if($categoria['Categorias']) : ?>
+																</ul>
+															<?php endif; ?>
+														</li>
+														<?php endforeach; ?>
+													<?php if($secao['Categorias']) : ?>
+														</ul>
+													<?php endif; ?>
+												</li>
+											<?php endforeach; ?>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</nav> -->
+					<div class="header-rt">
+						<?php if (!in_array($paginas[1], ['carrinho', 'checkout'])) : ?>
+								<div class="box-cart">
+									<a href="#modal-cart" data-toggle="modal"><span class="cart-qtd"></span></a>
+								</div>
+						<?php endif; ?>
+						<div class="box-search">
+							<form name="termobusca" method="get" action="/busca">
+								<!-- <span class="btn-search" onclick="document.buscaresponsiva.submit();"></span> -->
+								<span class="btn-search" onclick="document.termobusca.submit();"></span>
+								<input class="textbox" type="text" name="termobusca" placeholder="O que você procura?" required="required" style="background: url(/images/site/icones/elements/icon-search.png) no-repeat; background-position: 95% 14px; background-size:5%;"/>
+							</form>
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+
+
+					<nav class="main-navigation">
+						<a class="menu-mb title-nav">
+							<div class="icon">
+								<span class="i-bar"></span>
+								<span class="i-bar"></span>
+								<span class="i-bar"></span>
+							</div>
+							<span class="text">Menu +</span>
+						</a>
+						<div class="menu-mb-content box-nav">
+							<span class="close-menu"></span>
+							<div class="ue-menu">
+								<ul class="menu-l1 ue-options-menu">
+									<?php
+										$menuSite = getRest($endPoint['menu']);
+										foreach ((array) $menuSite as $secao) :
+									?>
+										<li class="ue-list-option">
+											<a href="/secao?id=<?= $secao['SecaoID'] ?>">
+												<span class="icon"><img src="<?= htmlentities($secao['Imagem']) ?>"></span>
+												<span class="text"><?= htmlentities($secao['Descricao']) ?></span>
+											</a>
+											<?php if($secao['Categorias']) : ?>
+												<span class="drop-toggle nav-plus"></span>
+												<ul class="drop-content menu-l2">
+											<?php endif; ?>
+											<?php foreach ((array) $secao['Categorias'] as $categoria) : ?>
+												<li style="border-bottom: 0.5px solid #666;">
+													<a href="/categoria?id=<?= $categoria['ID'] ?>" ><?= htmlentities($categoria['Descricao']) ?></a>
+													<?php if($categoria['Categorias']) : ?>
+														<span class="drop-toggle nav-plus"></span>
+														<ul class="drop-content menu-l3">
+													<?php endif; ?>
+													<?php foreach ((array) $categoria['Categorias'] as $subcategoria) : ?>
+															<li><a href="/categoria?id=<?= $subcategoria['ID'] ?>"><?= htmlentities($subcategoria['Descricao']) ?></a></li>
+													<?php endforeach; ?>
+													<?php if($categoria['Categorias']) : ?>
+														</ul>
+													<?php endif; ?>
+												</li>
+												<?php endforeach; ?>
+											<?php if($secao['Categorias']) : ?>
+												</ul>
+											<?php endif; ?>
+										</li>
+									<?php endforeach; ?>
+								</ul>
+								<div class="ue-floated-menu">
+									<div class="drop-content">
+										<ul class="float-l1">
+											<?php
+												$menuSite = getRest($endPoint['menu']);
+												foreach ((array) $menuSite as $secao) :
+											?>
+												<li class="ue-floated-option">
+													<a href="/secao?id=<?= $secao['SecaoID'] ?>">
+														<span><?= htmlentities($secao['Descricao']) ?></span>
+													</a>
+													<?php if($secao['Categorias']) : ?>
+														<ul class="float-l2">
+													<?php endif; ?>
+													<?php foreach ((array) $secao['Categorias'] as $categoria) : ?>
+														<li style="border-bottom: 0.5px solid #666">
+															<a href="/categoria?id=<?= $categoria['ID'] ?>" ><?= htmlentities($categoria['Descricao']) ?></a>
+															<?php if($categoria['Categorias']) : ?>
+																<ul class="float-l3">
+															<?php endif; ?>
+															<?php foreach ((array) $categoria['Categorias'] as $subcategoria) : ?>
+																	<li style="border-bottom: 0.5px solid #666"><a href="/categoria?id=<?= $subcategoria['ID'] ?>"  ><?= htmlentities($subcategoria['Descricao']) ?></a></li>
 															<?php endforeach; ?>
 															<?php if($categoria['Categorias']) : ?>
 																</ul>
@@ -274,22 +387,8 @@
 							</div>
 						</div>
 					</nav>
-					<div class="header-rt">
-						<?php if (!in_array($paginas[1], ['carrinho', 'checkout'])) : ?>
-								<div class="box-cart">
-									<a href="#modal-cart" data-toggle="modal"><span class="cart-qtd"></span></a>
-								</div>
-						<?php endif; ?>
-						<div class="box-search">
-							<form name="termobusca" method="get" action="/busca">
-								<!-- <span class="btn-search" onclick="document.buscaresponsiva.submit();"></span> -->
-								<span class="btn-search" onclick="document.termobusca.submit();"></span>
-								<input class="textbox" type="text" name="termobusca" placeholder="O que você procura?" required="required" />
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
+
+
 		</div>
 	</header>
 
@@ -495,7 +594,7 @@
 		<div class="footer">
 			<div class="container">
 				<div class="inner-ft">
-					<div class="ft-col col-xs-3">
+					<div class="ft-col col-xs-2">
 						<div class="logo-ft">
 							<?php
 								foreach ((array) $footerData as $aboutFt) {
@@ -512,7 +611,7 @@
 							?>
 						</div>
 					</div>		
-					<div class="ft-col col-xs-3">
+					<div class="ft-col col-xs-2">
 						<div class="logo-ft">
 								<?php
 									foreach ((array) $footerData as $aboutFt) {
@@ -529,7 +628,7 @@
 								?>
 							</div>
 					</div>			
-					<div class="ft-col col-xs-3">
+					<div class="ft-col col-xs-2">
 						<div class="logo-ft">
 								<?php
 									foreach ((array) $footerData as $aboutFt) {
@@ -546,7 +645,7 @@
 								?>
 						</div>
 					</div>
-					<div class="ft-col col-xs-3">
+					<div class="ft-col col-xs-2">
 						<div class="logo-ft">
 							<?php
 								foreach ((array) $footerData as $aboutFt) {
@@ -563,6 +662,20 @@
 							?>
 						</div>
 					</div>
+					<div class="ft-col col-xs-4">
+						<div class="logo-ft">
+							<p></p>
+							<center>
+								<h4>FIQUE POR DENTRO!</h4>
+								Novidades, Lançamentos e Promoções
+								<p></p>
+								<form  class="index-search-form">
+									<input name="search" type="text" class="search-box" placeholder="&#xf002;  Seu E-mail">
+  									<button name="submit" class="" type="submit">Quero fazer parte</button>
+								</form>
+							</center>
+						</div>	
+					</div>
 
 
 
@@ -578,7 +691,7 @@
 												$facebook = $socialItem['Descricao'];
 											}
 							?>
-								<a href="<?= $socialItem['Descricao'] ?>">
+								<a href="<?= $socialItem['Descricao'] ?>" style="color:#22428e;" >
 									<img src="<?= $socialItem['Html'] ?>">
 								</a>
 							<?php
@@ -614,7 +727,7 @@
 				<div class="copy-col col-xs-12 col-sm-5 col-md-4 box-designed">
 					<div class="item">
 						<h2>Tecnologia</h2>
-						<a href="http://www.inventosistemas.com.br/" target="_blank">
+						<a href="#" target="_blank">
 							<img src="/images/site/logo-invento.png" alt="Invento">
 						</a>
 					</div>

@@ -35,3 +35,32 @@
     margin: 0px;
     position: relative;
 }
+
+.footer-links{
+    list-style-type: none;
+    -webkit-padding-start: 0px;
+}
+
+.ue-menu{
+    background-color: #22428e;
+    color: #fff;
+}
+
+
+  .index-search-form {
+    position: relative;
+    display: inline-flex;
+  }
+  
+  button[name="submit"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+  
+  .search-box {
+    width: 300px;
+    font-family: FontAwesome;
+    padding: 2px 0;
+  }

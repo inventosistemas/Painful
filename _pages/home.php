@@ -34,7 +34,7 @@
 		?>
 			<a href="<?= $banner['HotSite'] ?>" class="banner-link">
 				<div class="box-inner">
-					<img src="<?= $banner['Imagem'] ?>" alt="<?= $banner['Descricao'] ?>" title="<?= $banner['Titulo'] ?>" class="img-dsk">
+					<img src="<?= $banner['Imagem'] ?>" alt="<?= $banner['Descricao'] ?>" title="<?= $banner['Titulo'] ?>" class="img-dsk" style="height:300px;">
 					<img src="<?= $banner['ImagemMobile'] ?>" alt="<?= $banner['Descricao'] ?>" title="<?= $banner['Titulo'] ?>" class="img-mb">
 				</div>
 			</a>
@@ -107,6 +107,17 @@
 	<!-- Showcase home -->
 	<section class="showcase-home">
 		<div class="container">
+		  <div class="block" style="
+			color: #fff;
+			border-radius: 7px;
+			padding: 0px 20px 0px;
+			background-size: 100% 1005;
+			background-color: #22428e;  
+			margin-bottom:30px;">
+			<h2 class="title_block" style="font-weight:500; padding:20px;     font-size: 20px;
+    text-transform: uppercase;">Produtos em Destaque</h2>
+		  </div>	
+
 			<?php foreach ((array) $showcaseData as $prodShowcase) : 
 				$idProd = $prodShowcase['Produto']['ID'];
 				$imgProd = $prodShowcase['Produto']['Imagem'];

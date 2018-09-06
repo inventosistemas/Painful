@@ -243,7 +243,7 @@
 		<div class="container">
 			<h4 class="title-page">Minha conta</h4>
 				<div class="row">
-					<div class="col-md-3">
+					<div class="col-md-3" style="min-height:300px;">
 						<form name="formSair" id="formSair" method="post" action="/">
 							<ul class="nav tabs-left">
 								<li class="active"><a href="#inf-conta" data-toggle="tab">Informações da conta</a></li>
