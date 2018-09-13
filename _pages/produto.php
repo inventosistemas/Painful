@@ -89,7 +89,7 @@
 				<div class="box-img">
 					<?php if($dadosProduto['ImagemPlus1']) : ?>
 						<div class="box-zoom">
-							<img src="<?= $dadosProduto['ImagemPlus1'] ?>" data-zoom-image="<?= $dadosProduto['ImagemPlus1'] ?>" />
+							<img style="width:100%;max-height:100%;" src="<?= $dadosProduto['ImagemPlus1'] ?>" data-zoom-image="<?= $dadosProduto['ImagemPlus1'] ?>" />
 						</div>
 					<?php else : ?>
 						<div>
@@ -126,15 +126,18 @@
 			</div>
 			<div class="box-share">
 				<span class="title">Compartilhar</span>
-				<a href="javascript: void(0);" onclick="window.open('https://twitter.com/intent/tweet?text=Gostei+de+um+produto+da+Painful&url=<?= urlencode(URLSite . ltrim($URISite,"/")) ?>&hashtags=malinabeauty','twitter', 'toolbar=0, status=0, width=650, height=450');"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
 				<a href="javascript: void(0);" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?= urlencode(URLSite . ltrim($URISite,"/")) ?>','facebook', 'toolbar=0, status=0, width=650, height=450');"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+				<a href="javascript: void(0);" onclick="window.open('https://twitter.com/intent/tweet?text=Gostei+de+um+produto+da+Painful&url=<?= urlencode(URLSite . ltrim($URISite,"/")) ?>&hashtags=malinabeauty','twitter', 'toolbar=0, status=0, width=650, height=450');"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
 			</div>
 		</div>
 
 		<!-- Product right -->
 		<div class="col-sm-6 prod-rt">
 			<form name="dadosProduto" id="dadosProduto" method="post" onsubmit="false">
-				<h4 class="title"><?= $dadosProduto['Descricao'] ?></h4>
+				<div class="lenord_produto_referencia" style="margin-bottom: 15px;">
+					<span><b>Referência:</b></span> (Colocar código ref.)
+				</div>
+				<h4 class="title" style="color:#22428e;"><?= $dadosProduto['Descricao'] ?></h4>
 				<div class="box-wish">
 					<?php if (!empty($dadosLogin['ID']) && $dadosLogin['ID'] > 0) : ?>
 						<a href="javascript:addWishList();" class="wish"><i class="fa fa-heart-o"></i> <span id="retornoWishlist">Adicionar à minha Wishlist</span></a>
@@ -278,6 +281,21 @@
 				<?php
 						$parcelamento = getRest(str_replace(['{IDProduto}', '{valorProduto}'], [$dadosProduto['ID'], $dadosProduto['PrecoVigente']], $endPoint['parcelamento']));
 				?>
+
+					<div class="lenord_frete" style="margin-top:15px;">
+					 <div style="width:100%; padding:5px; color:#fff; background-color:#22428e">
+					 	<center>Cálculo de Frete</center>
+					 </div>	
+					 <div style="background-color: #eee; padding:5px;">
+					 	<span style="width:50%">
+						 <input type="text" placeholder="00000-000">
+						</span>
+						<span style="width:50%; margin-left: 10px;">
+						<button type="submit">Calcular</button>
+						</span>
+					 </div>
+					</div>
+
 					<div class="box-installment">
 						<?php
 						if (!empty($parcelamento[0]) && $parcelamento[0]['Numero'] === 0) {
