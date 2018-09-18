@@ -124,11 +124,13 @@
 					<?php endif; ?>
 				</div>
 			</div>
+			<!--
 			<div class="box-share">
 				<span class="title">Compartilhar</span>
 				<a href="javascript: void(0);" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?= urlencode(URLSite . ltrim($URISite,"/")) ?>','facebook', 'toolbar=0, status=0, width=650, height=450');"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
 				<a href="javascript: void(0);" onclick="window.open('https://twitter.com/intent/tweet?text=Gostei+de+um+produto+da+Painful&url=<?= urlencode(URLSite . ltrim($URISite,"/")) ?>&hashtags=malinabeauty','twitter', 'toolbar=0, status=0, width=650, height=450');"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
 			</div>
+			-->
 		</div>
 
 		<!-- Product right -->
@@ -281,6 +283,19 @@
 				<?php
 						$parcelamento = getRest(str_replace(['{IDProduto}', '{valorProduto}'], [$dadosProduto['ID'], $dadosProduto['PrecoVigente']], $endPoint['parcelamento']));
 				?>
+
+					<div class="lenord_frete" style="margin-top:15px;">
+						<div class="box-share">
+							<button style="padding:5px;"><a href="javascript: void(0);" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?= urlencode(URLSite . ltrim($URISite,"/")) ?>','facebook', 'toolbar=0, status=0, width=650, height=450');"><i class="fa fa-facebook-square" aria-hidden="true" style="#3B5998"></i></a>
+								Compartilhar
+							</button>
+
+							<button style="padding:5px;">
+								<a href="javascript: void(0);" onclick="window.open('https://twitter.com/intent/tweet?text=Gostei+de+um+produto+da+Painful&url=<?= urlencode(URLSite . ltrim($URISite,"/")) ?>&hashtags=malinabeauty','twitter', 'toolbar=0, status=0, width=650, height=450');"><i class="fa fa-twitter-square" aria-hidden="true" style="color:#2AAAE0;"></i></a>
+								Compartilhar
+							</button>
+						</div>
+					</div>
 
 					<div class="lenord_frete" style="margin-top:15px;">
 					 <div style="width:100%; padding:5px; color:#fff; background-color:#22428e">
