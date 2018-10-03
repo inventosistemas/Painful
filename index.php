@@ -1,5 +1,6 @@
 <?php
 	define('HoorayWeb', TRUE);
+        $totalItens = 0;
 	include_once ("p_settings.php");
 	$phpPost = filter_input_array(INPUT_POST);
 	session_start();
@@ -79,7 +80,33 @@
 
 	<!-- Scripts -->
 	<script src="/javascripts/jquery.maskedinput.js"></script>
+	<script>
+      function enviarNewsLetter()
+      {
+        $('#retornoNews').html('Enviando...');
+        
+        var dataString = 'emailInscricao=' + document.getElementById('newsEmail').value;
+            dataString += '&postnews=<?= md5("enviarNewsLetter") ?>';
+
+        $.ajax({
+            type: "post",
+            url: "/_pages/enviarContato.php",
+            data: dataString,
+            cache: false,
+            success: function (retornoPHP) 
+            {
+                $('#retornoNews').html(retornoPHP);
+            }
+        });
+        
+        document.getElementById('newsEmail').value = '';
+    }
+</script>
 	<script type="text/javascript">
+            function refreshCarrinho()
+            {
+                window.location.reload(true); 
+            }
 		function obterBearer() {
 			$('#resultBearer').html('Autenticando...');
 
@@ -143,6 +170,7 @@
 						});
 						document.getElementById('itemCarinhoModal' + IDProduto).style.display = 'none';
 					}
+                                        refreshCarrinho();
 				});
 		}
 	</script>
@@ -670,12 +698,17 @@
 								Novidades, Lançamentos e Promoções
 								<p></p>
 								<form  class="index-search-form">
-									<input name="search" type="text" class="search-box" placeholder="&#xf002;  Seu E-mail">
-  									<button name="submit" class="" type="submit">Quero fazer parte</button>
+									<input id="newsEmail" name="newsEmail" type="text" class="search-box" placeholder="&#xf002;  Seu E-mail">
+									
+									<!--<input name="search" type="text" class="search-box" placeholder="&#xf002;  Seu E-mail" Jorge>--> 
+									<!--<input class="form-control" type="text" id="newsEmail" name="newsEmail" placeholder="Digite seu e-mail" />-->
+  									<button name="submit" onclick="enviarNewsLetter();" class="" type="button">Quero fazer parte </button>
+									<!--<button type="button" class="btn" onclick="enviarNewsLetter();"><i class="glyphicon glyphicon-menu-right"></i> </button>-->
 								</form>
 							</center>
 						</div>	
 					</div>
+					 <span id="retornoNews"></span>
 
 
 
@@ -836,6 +869,16 @@
 							if (!empty($carrinho) && !empty($carrinho['Itens'])) :
 						?>
 							<ul>
+                                                            
+                                                             <!--Evandro Contador Carrinho itens + qtdes exibir no ícone -->
+                                                            <?php foreach ((array)$carrinho['Itens'] as $itemDoCarrinho)
+                                                            {
+                                                                $totalItens += $itemDoCarrinho['Quantidade'] ;
+                                                            }
+                                                            ?>
+                                                             <!--Evandro Contador Carrinho itens + qtdes exibir no ícone -->
+                                                            
+                                                            
 								<?php foreach ((array) $carrinho['Itens'] as $itemCarrinho) : ?>
 									<li id="itemCarinhoModal<?= $itemCarrinho['Id'] ?>">
 										<div class="row">
@@ -848,6 +891,7 @@
 												<p class="qtd">Quantidade: <?= $itemCarrinho['Quantidade'] ?></p>
 												<p class="value"><?= formatar_moeda($itemCarrinho['ValorTotal']) ?></p>
 												<p><i id="resultDelCarrinho<?= $itemCarrinho['Id'] ?>"></i></p>
+                                                                                               
 											</div>
 											<div class="col-xs-2 text-right">
 												<a href="javascript:retirarCarrinhoModal('<?= $itemCarrinho['Id'] ?>');" title="Retirar do carrinho" class="btn-remove"><i class="fa fa-trash" aria-hidden="true"></i></a>
@@ -856,6 +900,7 @@
 									</li>
 								<?php endforeach; ?>
 							</ul>
+                                                       
 							<a href="/carrinho#cupomLink" class="m-coupon">Cupom de Desconto</a>
 							<form method="post" action="/carrinho" class="form-btn">
 								<button type="submit" class="btn btn-primary btn-lg">Checkout</button>
@@ -874,7 +919,7 @@
 	<?php if (!empty($carrinho) && !empty($carrinho['Itens'])) : ?>
 		<script type="text/javascript">
 			$('.cart-qtd').each(function(){
-				$(this).html('<?= count($carrinho['Itens']) ?>');
+				$(this).html('<?= $totalItens ?>');
 			});
 		</script>       
 	<?php else : ?>

@@ -3,8 +3,8 @@ if (!defined('HoorayWeb'))
 {
     die;
 }
-define ('URLSite', 'http://localhost:8085/'); 
-define ('URLWebAPI', 'http://painfulwebapi.inventosistemas.com.br/'); // 'http://wamalina.inventosistemas.com.br/' ); // 'http://localhost:34191/'
+define ('URLSite', 'http://localhost:8087/'); 
+define ('URLWebAPI', 'http://hooraywebapi.inventosistemas.com.br/');// 'http://hooraywebapi.inventosistemas.com.br/'); // 'http://painfulwebapi.inventosistemas.com.br/'); // 'http://wamalina.inventosistemas.com.br/' ); // 'http://localhost:34191/'
 
 $endPoint = ['token'           => URLWebAPI . "Token",
             'login'            => URLWebAPI . "v1/login/",
@@ -19,7 +19,7 @@ $endPoint = ['token'           => URLWebAPI . "Token",
             'marcas'           => URLWebAPI . "v1/vitrine/obtermarcas/",
             'marcasdestaque'   => URLWebAPI . "v1/marca/destaque/",
             'detalhesmarca'    => URLWebAPI . "v1/marca/{IDMarca}/obterporid/",
-            'vitrine'          => URLWebAPI . "v1/vitrine/16/",
+            'vitrine'          => URLWebAPI . "v1/vitrine/7/",
             'rodape'           => URLWebAPI . "v1/rodape/",
             'maisvedidos'      => URLWebAPI . "v1/produto/maisvendidos/",
             'categoria'        => URLWebAPI . "v1/produto/{IDCategoria}/obtercategoria/",

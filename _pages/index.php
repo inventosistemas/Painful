@@ -1,6 +1,6 @@
 <?php
 	define('HoorayWeb', TRUE);
-
+        $totalItens = 0;
 	include_once ("p_settings.php");
 	$phpPost = filter_input_array(INPUT_POST);
 	session_start();
@@ -77,6 +77,10 @@
 	<!-- Scripts -->
 	<script src="/javascripts/jquery.maskedinput.js"></script>
 	<script type="text/javascript">
+            function refreshCarrinho()
+            {
+                window.location.reload(true); 
+            }
 		function obterBearer() {
 			$('#resultBearer').html('Autenticando...');
 
@@ -141,6 +145,7 @@
 						document.getElementById('itemCarinhoModal' + IDProduto).style.display = 'none';
 					}
 				});
+                                 refreshCarrinho();
 		}
 	</script>
 </head>
@@ -835,6 +840,16 @@
 							if (!empty($carrinho) && !empty($carrinho['Itens'])) :
 						?>
 							<ul>
+                                                            
+                                                            <!--Evandro Contador Carrinho itens + qtdes exibir no ícone -->
+                                                            <?php foreach ((array)$carrinho['Itens'] as $itemDoCarrinho)
+                                                            {
+                                                                $totalItens += $itemDoCarrinho['Quantidade'] ;
+                                                            }
+                                                            ?>
+                                                            <!--Evandro Contador Carrinho itens + qtdes exibir no ícone -->
+                                                            
+                                                            
 								<?php foreach ((array) $carrinho['Itens'] as $itemCarrinho) : ?>
 									<li id="itemCarinhoModal<?= $itemCarrinho['Id'] ?>">
 										<div class="row">
@@ -847,6 +862,7 @@
 												<p class="qtd">Quantidade: <?= $itemCarrinho['Quantidade'] ?></p>
 												<p class="value"><?= formatar_moeda($itemCarrinho['ValorTotal']) ?></p>
 												<p><i id="resultDelCarrinho<?= $itemCarrinho['Id'] ?>"></i></p>
+                                                                                                
 											</div>
 											<div class="col-xs-2 text-right">
 												<a href="javascript:retirarCarrinhoModal('<?= $itemCarrinho['Id'] ?>');" title="Retirar do carrinho" class="btn-remove"><i class="fa fa-trash" aria-hidden="true"></i></a>
@@ -855,6 +871,7 @@
 									</li>
 								<?php endforeach; ?>
 							</ul>
+                                                      
 							<a href="/carrinho#cupomLink" class="m-coupon">Cupom de Desconto</a>
 							<form method="post" action="/carrinho" class="form-btn">
 								<button type="submit" class="btn btn-primary btn-lg">Checkout</button>
@@ -873,7 +890,7 @@
 	<?php if (!empty($carrinho) && !empty($carrinho['Itens'])) : ?>
 		<script type="text/javascript">
 			$('.cart-qtd').each(function(){
-				$(this).html('<?= count($carrinho['Itens']) ?>');
+				$(this).html('<?= $totalItens ?>');
 			});
 		</script>       
 	<?php else : ?>

@@ -9,6 +9,10 @@
 ?>
 
 <script type="text/javascript">
+        function refreshCarrinho()
+        {
+            window.location.reload(true); 
+        }
 	function atualizarCarrinho() {
 		$('#resultCart').html('Adicionando ao seu carrinho...');
 
@@ -42,6 +46,7 @@
 					$(this).html($('#previewCart ul li').length);
 				});
 			}
+                        refreshCarrinho();
 		});
 	}
 

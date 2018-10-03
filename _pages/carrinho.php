@@ -126,6 +126,10 @@
 </div>
 
 <script type="text/javascript">
+        function refreshCarrinho()
+        {
+            window.location.reload(true); 
+        }
 	function retirarCarrinho(IDProduto) {
 		$('#cartData').html('<?= $esperaResultado ?>');
 		$.post('/_pages/carrinhoEditar.php', {
@@ -135,10 +139,14 @@
 			posttipoedicao:'<?= md5("remover") ?>',
 			posttipocarrinho:'<?= md5("pagina") ?>'
 		},
+                     
 		function(dataCarrinho) {
 			$('#cartData').html(dataCarrinho);
-		});                
+                       
+		}); 
+                refreshCarrinho();   
 	}
+       
 	function atualizarQtde(IDProduto) {
 		var qtdeAlterar = document.getElementById("qtdeItemCarriho" + IDProduto).value;
 		$.post('/_pages/carrinhoEditar.php', {
@@ -152,7 +160,8 @@
 		function(dataCarrinho) {
 			$('#cartData').html(dataCarrinho);
 			atualizarFrete();
-		});                
+		}); 
+                refreshCarrinho();
 	}    
     
 	function atualizarFrete() {
@@ -170,6 +179,7 @@
 			$('#cartData').html(dataCarrinho);
 		});
 		$('#atualizandoCEP').html('');
+                refreshCarrinho();
 		return false;
 	}
 
@@ -250,5 +260,6 @@
 				_this.text('Enviar');
 			});
 		}
+                 refreshCarrinho();
 	});
 </script>
