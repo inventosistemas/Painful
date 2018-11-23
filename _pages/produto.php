@@ -6,6 +6,12 @@
 	} else {
 		$IDCarrinho = "-1";
 	}
+
+	// LENORD
+	define('HoorayWeb', TRUE);
+	include_once ('p_settings.php');	
+	$cep = $_POST['cep'];
+	$dadosCep = getRest(str_replace(["{cep}", "{produtoID}","{skuID}"], [$cep, $dadosProduto['ID'],$dadosProduto['ID']], $endPoint['freteproduto']), [], "GET");
 ?>
 
 <script type="text/javascript">
@@ -307,14 +313,33 @@
 					 <div style="width:100%; padding:5px; color:#fff; background-color:#22428e">
 					 	<center>Cálculo de Frete</center>
 					 </div>	
-					 <div style="background-color: #eee; padding:5px;">
-					 	<span style="width:50%">
-						 <input type="text" placeholder="00000-000">
-						</span>
-						<span style="width:50%; margin-left: 10px;">
-						<button type="submit">Calcular</button>
-						</span>
-					 </div>
+					 <form name="consultarCEP" id="consultarCEP" method="POST" action="/produto">
+						<div style="background-color: #eee; padding:5px;">
+							<span style="width:50%">
+							<input type="text" name="cep" id="cep" placeholder="00000000">
+							</span>
+							<span style="width:50%; margin-left: 10px;">
+							<button type="submit">Calcular</button>
+							</span>
+						</div>
+						<div>
+							<?php
+								if ($dadosCep == true)
+								{
+									echo "	<div style='width:100%; padding:5px; color:#fff; background-color:#22428e'>
+											<center>Frete Calculado</center>
+											</div>
+											<div style='width:100%; padding:5px; font-size:14px; text-align:center;'>";	
+									echo formatar_moeda($dadosCep['Valor']);
+									echo "	</div>";
+								} else {
+									echo "	<div style='width:100%; padding:5px; color:#fff; background-color:#22428e'>
+											<center>Aguardando CEP</center>
+											</div>";	
+								}
+							?>
+						</div>
+					 </form>
 					</div>
 
 					<div class="box-installment">

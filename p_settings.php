@@ -3,8 +3,8 @@ if (!defined('HoorayWeb'))
 {
     die;
 }
-define ('URLSite', 'http://localhost:8087/'); 
-define ('URLWebAPI', 'http://hooraywebapi.inventosistemas.com.br/');// 'http://hooraywebapi.inventosistemas.com.br/'); // 'http://painfulwebapi.inventosistemas.com.br/'); // 'http://wamalina.inventosistemas.com.br/' ); // 'http://localhost:34191/'
+define ('URLSite', 'http://painful.inventosistemas.com.br/'); 
+define ('URLWebAPI', 'http://painfulwebapi.inventosistemas.com.br/'); 
 
 $endPoint = ['token'           => URLWebAPI . "Token",
             'login'            => URLWebAPI . "v1/login/",
@@ -19,7 +19,7 @@ $endPoint = ['token'           => URLWebAPI . "Token",
             'marcas'           => URLWebAPI . "v1/vitrine/obtermarcas/",
             'marcasdestaque'   => URLWebAPI . "v1/marca/destaque/",
             'detalhesmarca'    => URLWebAPI . "v1/marca/{IDMarca}/obterporid/",
-            'vitrine'          => URLWebAPI . "v1/vitrine/7/",
+            'vitrine'          => URLWebAPI . "v1/vitrine/16/",
             'rodape'           => URLWebAPI . "v1/rodape/",
             'maisvedidos'      => URLWebAPI . "v1/produto/maisvendidos/",
             'categoria'        => URLWebAPI . "v1/produto/{IDCategoria}/obtercategoria/",
@@ -58,6 +58,7 @@ $endPoint = ['token'           => URLWebAPI . "Token",
             'parcarrinho'      => URLWebAPI . "v1/pagamento/{IDCarrinho}/{valorCarrinho}/obterparcelamentocarrinho/",
             'addwishlist'      => URLWebAPI . "v1/produto/adicionarwishlist/",
             'delwishlist'      => URLWebAPI . "v1/produto/removerwishlist/",
+            'freteproduto'     => URLWebAPI . "v1/produto/{cep}/{produtoID}/{skuID}/calcularfrete",
             'obterwishlist'    => URLWebAPI . "v1/produto/{IDLogin}/obterwishlistporlogin/",
             'meuspedidos'      => URLWebAPI . "v1/pedido/{IDParceiro}/meuspedidosheader/",
             'meuspedidosdet'   => URLWebAPI . "v1/pedido/{IDPedido}/meuspedidosdetail/"
