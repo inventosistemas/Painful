@@ -1007,7 +1007,13 @@
 									<div class="col-sm-9 col-md-6">
 										<input type="text" name="cadCNPJMC" id="cadCNPJMC" class="form-control" placeholder="CPF/CNPJ" required="required" />
 									</div>
-								</div>                            
+								</div>    
+								<div class="form-group row">
+									<label class="control-label col-sm-3" id="cadLabelCNPJ">RG/I.E</label>
+									<div class="col-sm-9 col-md-6">
+										<input type="text" name="cadRGIE" id="cadRGIE" class="form-control" placeholder="RG/I.E" required="required" />
+									</div>
+								</div>                          
 								<div class="form-group row">
 									<label class="control-label col-sm-3">CEP</label>
 									<div class="col-sm-9 col-md-6">
