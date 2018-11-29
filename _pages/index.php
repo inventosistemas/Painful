@@ -440,8 +440,8 @@
 			include_once ("_pages/blog.php");
 			break;
 
-		case "/blogpost" :
-			$dadosBlog = getRest($endPoint['blog']);
+		case "blogpost" :
+			$dadosBlog = getRest($endPoint['blog']); 
 
 			$phpGet = filter_input_array(INPUT_GET);
 			if (!empty($phpGet)) {
@@ -453,11 +453,11 @@
 			} else {
 				$detalheArtigo = getRest(str_replace("{IDArtigo}", $IDArtigoBlog , $endPoint['blogartigo']));
 
-				if (empty($detalheArtigo)) {
-					include_once ("_pages/404.php");
-				} else {
+				//if (empty($detalheArtigo)) {
+				//	include_once ("_pages/404.php");
+				//} else {
 					include_once ("_pages/blogPost.php");
-				}
+				//}
 			}
 			break;     
        
